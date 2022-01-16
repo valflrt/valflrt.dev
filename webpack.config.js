@@ -9,6 +9,12 @@ module.exports = {
   output: {
     path: `${__dirname}/dist/`,
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: `${__dirname}/src/public/index.html`,
+    }),
+    new MiniCssExtractPlugin.default(),
+  ],
   module: {
     rules: [
       {
@@ -21,15 +27,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.default, "css-loader"],
+        use: [MiniCssExtractPlugin.default.loader, "css-loader"],
       },
     ],
   },
   devtool: prod ? undefined : "source-map",
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: `${__dirname}/src/public/index.html`,
-    }),
-    new MiniCssExtractPlugin.default(),
-  ],
 };
