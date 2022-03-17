@@ -2,7 +2,8 @@
   "name": "react-app-template",
   "main": "src/index.ts",
   "scripts": {
-    "dev": "webpack serve --config ./webpack.config.js --mode development --port 3000"
+    "dev": "webpack serve --config ./webpack.config.js --mode development --port 3000",
+    "build": "webpack --config ./webpack.config.js --mode production"
   },
   "author": "valflrt",
   "license": "ISC",
