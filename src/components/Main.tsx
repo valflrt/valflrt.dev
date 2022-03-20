@@ -1,14 +1,11 @@
 import React from "react";
 
-const Main = () => {
+import MainStyles from "./Main.styles";
 
-  console.log(window.location.href);
-
-  return (
-    <div>
-      <p>hello</p>
-    </div>
-  )
-}
+const Main = () => (
+  <MainStyles.MainWrapper>
+    <p>Heya !</p>
+  </MainStyles.MainWrapper>
+);
 
 export default Main;
