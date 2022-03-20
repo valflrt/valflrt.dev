@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 
 import Layout from "./layout/Layout";
 import Router from "./router/Router";
@@ -8,11 +8,11 @@ import Router from "./router/Router";
 import GlobalStyles from "./global.styles";
 
 ReactDOM.render(
-  <BrowserRouter>
+  <HashRouter>
     <GlobalStyles />
     <Layout>
       <Router />
     </Layout>
-  </BrowserRouter>,
+  </HashRouter>,
   document.getElementById("root")
 );
