@@ -1,6 +1,6 @@
 # react-app-template
 
-A simple react app template for those who don't want to use `create-react-app`
+A simple react app template for those who **don't want** to use `create-react-app`
 
 ### Features
 
