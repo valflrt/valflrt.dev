@@ -5,9 +5,14 @@ import Layout from "./layout/Layout";
 
 import Main from "./components/Main";
 
+import GlobalStyles from "./global.styles";
+
 ReactDOM.render(
-  <Layout>
-    <Main />
-  </Layout>,
+  <>
+    <GlobalStyles />
+    <Layout>
+      <Main />
+    </Layout>
+  </>,
   document.getElementById("root")
 );
