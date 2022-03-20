@@ -1,11 +1,11 @@
 import React from "react";
-
-import MainStyles from "./Main.styles";
+import { Link } from "react-router-dom";
 
 const Main = () => (
-  <MainStyles.MainWrapper>
+  <>
     <p>Heya !</p>
-  </MainStyles.MainWrapper>
+    <Link to={"/fgsigfds"}>Go to /fgsigfds (404 page test)</Link>
+  </>
 );
 
 export default Main;
