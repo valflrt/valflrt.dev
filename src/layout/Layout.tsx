@@ -1,5 +1,9 @@
 import React, { FC } from "react";
 
-const Layout: FC = ({ children }) => <>{children}</>;
+import LayoutStyles from "./Layout.styles";
+
+const Layout: FC = ({ children }) => (
+  <LayoutStyles.Layout>{children}</LayoutStyles.Layout>
+);
 
 export default Layout;
