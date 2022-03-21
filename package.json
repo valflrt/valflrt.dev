@@ -1,5 +1,5 @@
 {
-  "name": "react-app-template",
+  "name": "typescript-react-template",
   "main": "src/index.ts",
   "scripts": {
     "dev": "webpack serve --config ./webpack.config.js --mode development --port 3000",
