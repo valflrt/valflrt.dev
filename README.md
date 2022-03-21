@@ -25,4 +25,4 @@ Then pull from this repository:
 git pull https://github.com/valflrt/typescript-react-template.git
 ```
 
-Then just customize it !
+You're done ! Happy coding (≧▽≦)
