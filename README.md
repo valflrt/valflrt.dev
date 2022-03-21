@@ -1,10 +1,10 @@
 # typescript-react-template
 
-A simple react app template (typescript) for those who **don't want** to use `create-react-app`
+A very simple react app template (typescript) for those who **don't want** to use `create-react-app`
 
 ### Features
 
-`react-router-dom` and `styled-components` are implemented so you can use them right away !
+`react-router-dom` and `styled-components` are implemented already so you can use them right away !
 
 Example files:
 
@@ -25,4 +25,4 @@ Then pull from this repository:
 git pull https://github.com/valflrt/typescript-react-template.git
 ```
 
-Now edit the code however you'd like !
+Then just customize it !
