@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Main = () => (
   <>
-    <p>Heya !</p>
+    <h1>Heya !</h1>
     <Link to={"/fgsigfds"}>Go to /fgsigfds (404 page test)</Link>
   </>
 );
