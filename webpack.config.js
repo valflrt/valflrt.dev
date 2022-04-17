@@ -1,17 +1,16 @@
-const prod = process.env.NODE_ENV === "production";
+const path = require("path");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  mode: prod ? "production" : "development",
-  entry: "./src/index.tsx",
+  entry: path.join(__dirname, "src", "index.tsx"),
   output: {
-    path: `${__dirname}/build/`,
+    path: path.resolve(__dirname, "build"),
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: `${__dirname}/public/index.html`,
+      template: path.join(__dirname, "public", "index.html"),
     }),
     new MiniCssExtractPlugin.default(),
   ],
@@ -28,8 +27,21 @@ module.exports = {
       {
         test: /\.css$/,
         use: [MiniCssExtractPlugin.default.loader, "css-loader"],
+        exclude: /\.module\.css$/,
+      },
+      {
+        test: /\.module\.css$/,
+        use: [
+          MiniCssExtractPlugin.default.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true,
+            },
+          },
+        ],
       },
     ],
   },
-  devtool: prod ? undefined : "source-map",
 };
