@@ -4,42 +4,42 @@ A very simple react app template (typescript) for those who **don't want** to us
 
 - [typescript-react-template](#typescript-react-template)
   - [Features](#features)
-    - [Examples](#examples)
-  - [Installation](#installation)
+    - [More information](#more-information)
+  - [How to use](#how-to-use)
   - [Running](#running)
 
 ## Features
 
-`react-router-dom` and `styled-components` are implemented already so you can use them right away !
+**Routing** (react-router-dom) and **css-modules** are implemented already so you can use them right away !
 
-### Examples
+### More information
 
-- **react-router-dom**
-  - The `Router` [`Router.tsx`](src/router/Router.tsx)
-  - An example route [`Main.tsx`](src/routes/Main.tsx)
-- **styled-components**
-  - An example style declaration file [`Layout.styles.tsx`](src/layout/Layout.styles.tsx)
-  - Its implementation [`Layout.tsx`](src/layout/Layout.tsx)
+- **routing**
+  - The ["router"](src/router/Router.tsx) and an [example route](src/routes/Main.tsx)
+- **css-modules**
+  - An [example of css module file](src/layout/Layout.module.css) and [its implementation](src/layout/Layout.tsx)
+- **simple css**
+  - You can also create simple css files (global styles for example). see [`globalStyles.css`](src/globalStyles.css)
 
-## Installation
+## How to use
 
-First initialize an empty repository with:
+First initialize an empty repository (if not done already):
 
 ```
 git init
 ```
 
-Then pull from this repository:
+Then pull from this template to your repository:
 
 ```
 git pull https://github.com/valflrt/typescript-react-template.git
 ```
 
-You're done ! Happy coding (≧▽≦)
+You're done !
 
 ## Running
 
 Two preset options are available:
 
-- `npm start` - Start react live site (open **localhost:3000** on your computer)
-- `npm run build` - Creates an optimized build for deployment (build can be found at **./build/**)
+- `npm start` - Starts live version for development (open **localhost:3000** on your computer)
+- `npm run build` - Creates an optimized build for deployment (**build** directory on the project root)
