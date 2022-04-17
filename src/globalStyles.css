@@ -17,5 +17,11 @@ body {
   overflow: hidden auto;
 
   color: #f1f1f1;
-  background-color: #16161a;
+  background-color: #161519;
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: #877dba; /* my fav color :) */
 }
