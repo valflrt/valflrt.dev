@@ -1,6 +1,4 @@
-import styled from "styled-components";
-
-let Layout = styled.div`
+.layout {
   width: 100%;
   height: 100%;
 
@@ -8,8 +6,4 @@ let Layout = styled.div`
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-`;
-
-export default {
-  Layout,
-};
+}

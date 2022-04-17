@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 
-import LayoutStyles from "./Layout.styles";
+import styles from "./Layout.module.css";
 
 const Layout: FC = ({ children }) => (
-  <LayoutStyles.Layout>{children}</LayoutStyles.Layout>
+  <div className={styles.layout}>{children}</div>
 );
 
 export default Layout;
