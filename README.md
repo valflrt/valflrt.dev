@@ -1,8 +1,8 @@
-# typescript-react-template
+# React Template
 
-A very simple react app template (typescript) for those who **don't want** to use `create-react-app`
+The react template I created and that I use, very simple and with typescript for those who **don't want** to use `create-react-app`.
 
-- [typescript-react-template](#typescript-react-template)
+- [React Template](#react-template)
   - [Features](#features)
     - [More information](#more-information)
   - [How to use](#how-to-use)
