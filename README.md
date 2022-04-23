@@ -9,18 +9,19 @@
       - [More information](#more-information)
   - [How to install](#how-to-install)
   - [How to use](#how-to-use)
+  - [License](#license)
 
 The react template I created and that I use, very simple and with typescript for those who **don't want** to use `create-react-app`.
 
 ## Features
 
-<span style="text-decoration: underline">Routing</span> (react-router-dom), <span style="text-decoration: underline">css-modules</span> (css and scss) and <span style="text-decoration: underline">pure css</span> (also css and scss) are already implemented so you can use them right away !
+**Routing** (react-router-dom), **css-modules** (css and scss) and **pure css** (also css and scss) are already implemented so you can use them right away !
 
 #### More information
 
-- **routing** - The ["router"](src/router/Router.tsx) and an [example route](src/routes/Main.tsx)
-- **css-modules** - An [example of scss module file](src/layout/Layout.module.scss) and [its implementation](src/layout/Layout.tsx)
-- **simple css** - You can also create pure css files (useful for global styles for example). see [globalStyles.css](src/globalStyles.css)
+- routing - The ["router"](src/router/Router.tsx) and an [example route](src/routes/Main.tsx)
+- css-modules - An [example of scss module file](src/layout/Layout.module.scss) and [its implementation](src/layout/Layout.tsx)
+- simple css - You can also create pure css files (useful for global styles for example). see [globalStyles.css](src/globalStyles.css)
 
 ## How to install
 
@@ -43,4 +44,8 @@ Two preset options are available:
 - `npm start` - Starts live version for development (open **localhost:3000** on your computer)
 - `npm run build` - Creates an optimized build for deployment (in **build/** directory)
 
-**Now you can customize this simple template to make a website that will surely be super-duper amazing !**
+**You can now customize this simple template to make a website that will surely be super-duper amazing !**
+
+## License
+
+MIT
