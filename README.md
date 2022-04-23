@@ -9,6 +9,7 @@
       - [More information](#more-information)
   - [How to install](#how-to-install)
   - [How to use](#how-to-use)
+  - [Reporting bugs](#reporting-bugs)
   - [License](#license)
 
 The react template I created and that I use, very simple and with typescript for those who **don't want** to use `create-react-app`.
@@ -45,6 +46,10 @@ Two preset options are available:
 - `npm run build` - Creates an optimized build for deployment (in **build/** directory)
 
 **You can now customize this simple template to make a website that will surely be super-duper amazing !**
+
+## Reporting bugs
+
+If you encounter something working improperly please [create an issue](https://github.com/valflrt/react-template/issues/new) so I can fix the problem !
 
 ## License
 
