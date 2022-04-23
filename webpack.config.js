@@ -26,6 +26,7 @@ module.exports = {
   ],
   module: {
     rules: [
+      // typescript
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
@@ -34,13 +35,26 @@ module.exports = {
         },
         use: "ts-loader",
       },
+
+      // css/scss
       {
-        test: /\.css$/,
-        use: [MiniCssExtractPlugin.default.loader, "css-loader"],
+        test: /\.s(a|c)ss$/,
+        use: [
+          MiniCssExtractPlugin.default.loader,
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+            },
+          },
+          "postcss-loader",
+          "sass-loader",
+        ],
         exclude: /\.module\.css$/,
       },
+      // css/scss modules
       {
-        test: /\.module\.css$/,
+        test: /\.module\.s(a|c)ss$/,
         use: [
           MiniCssExtractPlugin.default.loader,
           {
@@ -52,6 +66,8 @@ module.exports = {
               },
             },
           },
+          "postcss-loader",
+          "sass-loader",
         ],
       },
     ],
