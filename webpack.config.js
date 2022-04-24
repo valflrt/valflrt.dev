@@ -4,6 +4,29 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
+let loadCss = [
+  MiniCssExtractPlugin.default.loader,
+  {
+    loader: "css-loader",
+    options: {
+      importLoaders: 1,
+    },
+  },
+];
+
+let loadCssWithModules = [
+  MiniCssExtractPlugin.default.loader,
+  {
+    loader: "css-loader",
+    options: {
+      importLoaders: 1,
+      modules: {
+        localIdentName: "[local]-[hash:base64:12]",
+      },
+    },
+  },
+];
+
 module.exports = {
   entry: path.join(__dirname, "src", "index.tsx"),
   output: {
@@ -26,50 +49,57 @@ module.exports = {
   ],
   module: {
     rules: [
+      // javascript
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: "babel-loader",
+      },
+
       // typescript
       {
         test: /\.(ts|tsx)$/,
         exclude: /node_modules/,
-        resolve: {
-          extensions: [".ts", ".tsx", ".js", ".json"],
-        },
         use: "ts-loader",
       },
 
-      // css/scss
+      // json
+      { test: /\.json$/, use: "json-loader" },
+
+      // css
       {
-        test: /\.s(a|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.default.loader,
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-            },
-          },
-          "postcss-loader",
-          "sass-loader",
-        ],
+        test: /\.css$/,
+        use: loadCss,
         exclude: /\.module\.css$/,
       },
-      // css/scss modules
+
+      // css modules
+      {
+        test: /\.module\.css$/,
+        use: loadCssWithModules,
+      },
+
+      // scss
+      {
+        test: /\.s(a|c)ss$/,
+        use: [...loadCss, "postcss-loader", "sass-loader"],
+        exclude: /\.module\.s(a|c)ss$/,
+      },
+
+      // scss modules
       {
         test: /\.module\.s(a|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.default.loader,
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-              modules: {
-                localIdentName: "[local]-[hash:base64:12]",
-              },
-            },
-          },
-          "postcss-loader",
-          "sass-loader",
-        ],
+        use: [...loadCssWithModules, "postcss-loader", "sass-loader"],
+      },
+
+      // files
+      {
+        test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
+        use: ["file-loader"],
       },
     ],
+  },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".json"],
   },
 };
