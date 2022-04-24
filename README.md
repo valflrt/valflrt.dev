@@ -1,7 +1,7 @@
 <p align="center">
   <img src="https://cdn.discordapp.com/attachments/947485534194909224/967710993037807656/icon-128.png" />
   <p align="center">
-    <img src="https://img.shields.io/github/workflow/status/valflrt/react-template/build" /> <img src="https://img.shields.io/github/deployments/valflrt/react-template/github-pages?label=example%20deployment" /> <img src="https://img.shields.io/github/license/valflrt/react-template" />
+    <a href="https://github.com/valflrt/react-template/actions/workflows/build.yml"><img src="https://img.shields.io/github/workflow/status/valflrt/react-template/build" /></a> <a href="https://react-template.valflrt.dev"><img src="https://img.shields.io/github/deployments/valflrt/react-template/github-pages?label=example%20deployment" /></a> <a href="https://github.com/valflrt/react-template/blob/master/LICENSE"><img src="https://img.shields.io/github/license/valflrt/react-template" /></a>
   </p>
 </p>
 
