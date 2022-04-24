@@ -9,6 +9,7 @@
       - [More information](#more-information)
   - [How to install](#how-to-install)
   - [How to use](#how-to-use)
+  - [Deployment](#deployment)
   - [Reporting bugs](#reporting-bugs)
   - [License](#license)
 
@@ -46,6 +47,10 @@ Two preset options are available:
 - `npm run build` - Creates an optimized build for deployment (in **build/** directory)
 
 **You can now customize this simple template to make a website that will surely be super-duper amazing !**
+
+## Deployment
+
+- [`deploy:gh-pages`](https://github.com/valflrt/react-app-template/blob/087f80b5201d33218255e9366085ddf4771ab799/package.json#L7) - Deploy to github pages (deploys to branch "pages")
 
 ## Reporting bugs
 
