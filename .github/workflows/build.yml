@@ -30,3 +30,6 @@ jobs:
         run: |
           git add build.example
           git commit -a -m "Automatic example build" && git push
+
+      - name: Deploy
+        run: npm run deploy:gh-pages
