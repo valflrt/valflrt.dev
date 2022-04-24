@@ -19,4 +19,7 @@ jobs:
         run: npm i
 
       - name: Build
-        run: npm run build
+        run: rm -rf build.example && npm run build:example
+
+      - name: Push
+        run: git add build.example && git commit -a -m "Automatic example build" && git push
