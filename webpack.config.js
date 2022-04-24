@@ -40,7 +40,7 @@ module.exports = {
       patterns: [
         {
           from: "./public",
-          to: "./build",
+          to: ".",
           filter: (path) => !path.includes("index.html"),
         },
       ],
