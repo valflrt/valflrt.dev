@@ -50,7 +50,7 @@ Two preset options are available:
 
 ## Deployment
 
-- [`deploy:gh-pages`](https://github.com/valflrt/react-app-template/blob/087f80b5201d33218255e9366085ddf4771ab799/package.json#L7) - Deploy to github pages (deploys to branch "pages")
+- [`deploy:gh-pages`](https://github.com/valflrt/react-template/blob/master/package.json#L7) - Deploy to github pages (deploys to branch "pages")
 
 ## Reporting bugs
 
