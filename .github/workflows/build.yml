@@ -21,5 +21,12 @@ jobs:
       - name: Build
         run: rm -rf build.example && npm run build:example
 
+      - name: Setup git
+        run: |
+          git config user.email "vfleurit@gmail.com"
+          git config user.name "valflrt"
+
       - name: Push
-        run: git add build.example && git commit -a -m "Automatic example build" && git push
+        run: |
+          git add build.example
+          git commit -a -m "Automatic example build" && git push
