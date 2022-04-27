@@ -22,7 +22,7 @@ jobs:
         run: npm i
 
       - name: Build
-        run: rm -rf build.example && npm run build
+        run: rm -rf build && npm run build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.3.0
