@@ -5,7 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 let loadCss = [
-  MiniCssExtractPlugin.default.loader,
+  MiniCssExtractPlugin.loader,
   {
     loader: "css-loader",
     options: {
@@ -15,7 +15,7 @@ let loadCss = [
 ];
 
 let loadCssWithModules = [
-  MiniCssExtractPlugin.default.loader,
+  MiniCssExtractPlugin.loader,
   {
     loader: "css-loader",
     options: {
@@ -45,7 +45,7 @@ module.exports = {
         },
       ],
     }),
-    new MiniCssExtractPlugin.default(),
+    new MiniCssExtractPlugin(),
   ],
   module: {
     rules: [
