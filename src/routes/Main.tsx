@@ -1,21 +1,24 @@
 import { Link } from "react-router-dom";
 
-/**
- * You can import images
- */
-import logo from "../assets/logo-128.png";
+import styles from "./Main.module.scss";
 
 const Main = () => (
-  <>
-    {/* imported image used here */}
-    <img src={logo} alt="logo" />
-    <h1>Heya !</h1>
-    <p>This is a react template</p>
-    {/* use react-router-dom `Link` to redirect properly */}
-    <Link to={"/nothing"}>
-      Go to <b>/nothing</b> to test 404 page
-    </Link>
-  </>
+  <div className={styles.card}>
+    <h1>Heya ! I'm valflrt !</h1>
+    <p>
+      I'm a coding and self-deprecation enthusiast ! I'm french and proud to be
+      (oui oui baguette) and was born at{" "}
+      <code title="This is a Unix Epoch" className={"questionCursor"}>
+        1108087200
+      </code>
+      . I like TypeScript and NodeJS.
+    </p>
+    <div className={styles.links}>
+      <a href="https://gh.valflrt.dev">github</a>
+      <span className={styles.separator} />
+      <Link to={"/nothing"}>404</Link>
+    </div>
+  </div>
 );
 
 export default Main;
