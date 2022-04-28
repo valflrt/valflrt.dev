@@ -25,4 +25,4 @@ jobs:
         run: rm -rf build && npm run build
 
       - name: Deploy
-        run: deploy:gh-pages
+        run: npm run deploy:gh-pages
