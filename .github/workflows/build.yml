@@ -23,10 +23,12 @@ jobs:
       - name: Install (npm)
         run: npm i
 
-      - name: Setup git
-        run: |
-          git config --global user.email "vfleurit@gmail.com"
-          git config --global user.name "valflrt"
+      - name: Build
+        run: npm run build
 
-      - name: Build and Deploy
-        run: npm run deploy:gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: pages
+          publish_dir: ./build
