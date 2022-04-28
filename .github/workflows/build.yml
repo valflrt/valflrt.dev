@@ -21,8 +21,10 @@ jobs:
       - name: Install (npm)
         run: npm i
 
-      - name: Build
-        run: rm -rf build && npm run build
+      - name: Setup git
+        run: |
+          git config --global user.email "vfleurit@gmail.com"
+          git config --global user.name "valflrt"
 
-      - name: Deploy
+      - name: Build and Deploy
         run: npm run deploy:gh-pages
