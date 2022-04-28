@@ -25,7 +25,7 @@ jobs:
         run: |
           git config --global user.email "vfleurit@gmail.com"
           git config --global user.name "valflrt"
-          git remote set-url origin https://valflrt:${{ secrets.SSH_KEY }}@github.com/valflrt/project.git
+          git remote set-url origin https://valflrt:${{ secrets.SSH_KEY }}@github.com/valflrt/${{ github.event.repository.name }}.git
 
       - name: Build and Deploy
         run: npm run deploy:gh-pages
