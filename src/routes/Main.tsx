@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import styles from "./Main.module.scss";
 
 const Main = () => (
@@ -16,7 +14,13 @@ const Main = () => (
     <div className={styles.links}>
       <a href="https://gh.valflrt.dev">github</a>
       <span className={styles.separator} />
-      <Link to={"/nothing"}>404</Link>
+      <span>discord: valflrt#8436</span>
+      <span className={styles.separator} />
+      <a href="https://gh.valflrt.dev/lejardinier">
+        Le Jardinier (discord bot)
+      </a>
+      <span className={styles.separator} />
+      <a href="https://gh.valflrt.dev/react-template">My React template</a>
     </div>
   </div>
 );
