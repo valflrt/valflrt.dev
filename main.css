@@ -1,0 +1,104 @@
+.layout-eC4uBbLYaNLX{width:100%;height:100%;display:flex;flex-flow:column nowrap;align-items:center;justify-content:center}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: var(--primary-tone-090);
+  background: #443399cc;
+}
+::selection {
+  color: var(--primary-tone-090);
+  background: #443399cc;
+}
+
+:root {
+  --primary-tone-005: #090613;
+  --primary-tone-010: #110d26;
+  --primary-tone-015: #1a1339;
+  --primary-tone-020: #22194d;
+  --primary-tone-025: #2b2060;
+  --primary-tone-030: #332673;
+  --primary-tone-035: #3c2d86;
+  --primary-tone-040: #443399;
+  --primary-tone-045: #4d39ac;
+  --primary-tone-050: #5540bf;
+  --primary-tone-055: #6653c6;
+  --primary-tone-060: #7766cc;
+  --primary-tone-065: #8879d2;
+  --primary-tone-070: #998cd9;
+  --primary-tone-075: #aa9fdf;
+  --primary-tone-080: #bbb3e6;
+  --primary-tone-085: #ccc6ec;
+  --primary-tone-090: #ddd9f2;
+  --primary-tone-095: #eeecf9;
+
+  --monochrome-tone-005: #0c0b0e;
+  --monochrome-tone-010: #18171c;
+  --monochrome-tone-015: #24222a;
+  --monochrome-tone-020: #302e38;
+  --monochrome-tone-025: #3c3946;
+  --monochrome-tone-030: #474554;
+  --monochrome-tone-035: #535062;
+  --monochrome-tone-040: #5f5c70;
+  --monochrome-tone-045: #6b677e;
+  --monochrome-tone-050: #77738c;
+  --monochrome-tone-055: #858198;
+  --monochrome-tone-060: #928fa3;
+  --monochrome-tone-065: #a09daf;
+  --monochrome-tone-070: #adabba;
+  --monochrome-tone-075: #bbb9c6;
+  --monochrome-tone-080: #c9c7d1;
+  --monochrome-tone-085: #d6d5dd;
+  --monochrome-tone-090: #e4e3e8;
+  --monochrome-tone-095: #f1f1f4;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+
+  padding: 10px;
+
+  overflow: hidden auto;
+
+  color: var(--monochrome-tone-095);
+  background-color: var(--primary-tone-050);
+  text-shadow: 0 1px 0 var(--primary-tone-045);
+
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: var(--primary-tone-090);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0.25em;
+}
+
+code {
+  padding: 2px 4px;
+  border-radius: 4px;
+  background-color: var(--primary-tone-045);
+}
+
+.questionCursor {
+  cursor: help;
+}
+
