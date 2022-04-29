@@ -20,6 +20,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Setup git
+        run: |
+          git config --global user.email "vfleurit@gmail.com"
+          git config --global user.name "valflrt"
+
       - name: Install (npm)
         run: npm i
 
