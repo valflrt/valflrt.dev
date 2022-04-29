@@ -76,10 +76,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-a {
-  color: var(--primary-tone-090);
-}
-
 h1,
 h2,
 h3,
@@ -90,12 +86,20 @@ p {
   margin: 0.25em;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+
+.link {
+  color: var(--primary-tone-090);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 code {
   padding: 2px 4px;
   border-radius: 4px;
   background-color: var(--primary-tone-045);
-}
-
-.questionCursor {
-  cursor: help;
 }
