@@ -1,26 +1,33 @@
+import CopyLink from "../components/CopyLink";
 import styles from "./Main.module.scss";
 
 const Main = () => (
   <div className={styles.card}>
     <h1>Heya ! I'm valflrt !</h1>
-    <p>
-      I'm a coding and self-deprecation enthusiast ! I'm french and proud to be
-      (oui oui baguette) and was born at{" "}
-      <code title="This is a Unix Epoch" className={"questionCursor"}>
-        1108087200
-      </code>
-      . I like TypeScript and NodeJS.
-    </p>
+    <ul>
+      <li>A coding and self-deprecation enthusiast</li>
+      <li>
+        I was born at <code>1108087200</code> (Unix Epoch)
+      </li>
+      <li>I'm French and proud to be (oui oui baguette)</li>
+      <li>I like to use TypeScript and NodeJS</li>
+    </ul>
     <div className={styles.links}>
-      <a href="https://gh.valflrt.dev">github</a>
+      <a className={"link"} href="https://gh.valflrt.dev">
+        github
+      </a>
       <span className={styles.separator} />
-      <span>discord: valflrt#8436</span>
+      <CopyLink className={"link"} textToCopy="valflrt#8436">
+        discord: valflrt#8436
+      </CopyLink>
       <span className={styles.separator} />
-      <a href="https://gh.valflrt.dev/lejardinier">
+      <a className={"link"} href="https://gh.valflrt.dev/lejardinier">
         Le Jardinier (discord bot)
       </a>
       <span className={styles.separator} />
-      <a href="https://gh.valflrt.dev/react-template">My React template</a>
+      <a className={"link"} href="https://gh.valflrt.dev/react-template">
+        My React template
+      </a>
     </div>
   </div>
 );
