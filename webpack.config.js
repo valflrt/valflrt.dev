@@ -4,22 +4,22 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-let loadCss = [
+let loadCss = (loaders) => [
   MiniCssExtractPlugin.loader,
   {
     loader: "css-loader",
     options: {
-      importLoaders: 1,
+      importLoaders: loaders ?? 1,
     },
   },
 ];
 
-let loadCssWithModules = [
+let loadCssWithModules = (loaders) => [
   MiniCssExtractPlugin.loader,
   {
     loader: "css-loader",
     options: {
-      importLoaders: 1,
+      importLoaders: loaders ?? 1,
       modules: {
         localIdentName: "[local]-[hash:base64:12]",
       },
@@ -69,27 +69,27 @@ module.exports = {
       // css
       {
         test: /\.css$/,
-        use: loadCss,
+        use: loadCss(0),
         exclude: /\.module\.css$/,
       },
 
       // css modules
       {
         test: /\.module\.css$/,
-        use: loadCssWithModules,
+        use: loadCssWithModules(0),
       },
 
       // scss
       {
         test: /\.s(a|c)ss$/,
-        use: [...loadCss, "postcss-loader", "sass-loader"],
+        use: [...loadCss(2), "postcss-loader", "sass-loader"],
         exclude: /\.module\.s(a|c)ss$/,
       },
 
       // scss modules
       {
         test: /\.module\.s(a|c)ss$/,
-        use: [...loadCssWithModules, "postcss-loader", "sass-loader"],
+        use: [...loadCssWithModules(2), "postcss-loader", "sass-loader"],
       },
 
       // files
