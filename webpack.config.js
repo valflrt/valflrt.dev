@@ -9,7 +9,7 @@ let loadCss = (loaders) => [
   {
     loader: "css-loader",
     options: {
-      importLoaders: loaders ?? 1,
+      importLoaders: loaders ?? 0,
     },
   },
 ];
@@ -19,9 +19,9 @@ let loadCssWithModules = (loaders) => [
   {
     loader: "css-loader",
     options: {
-      importLoaders: loaders ?? 1,
+      importLoaders: loaders ?? 0,
       modules: {
-        localIdentName: "[local]-[hash:base64:12]",
+        localIdentName: "[local]-[hash:base64:6]",
       },
     },
   },
@@ -69,21 +69,21 @@ module.exports = {
       // css
       {
         test: /\.css$/,
-        use: loadCss(0),
         exclude: /\.module\.css$/,
+        use: loadCss(),
       },
 
       // css modules
       {
         test: /\.module\.css$/,
-        use: loadCssWithModules(0),
+        use: loadCssWithModules(),
       },
 
       // scss
       {
         test: /\.s(a|c)ss$/,
-        use: [...loadCss(2), "postcss-loader", "sass-loader"],
         exclude: /\.module\.s(a|c)ss$/,
+        use: [...loadCss(2), "postcss-loader", "sass-loader"],
       },
 
       // scss modules
