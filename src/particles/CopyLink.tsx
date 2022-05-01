@@ -1,4 +1,5 @@
 import { FC, HTMLProps, useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 import { omit } from "../utils";
 
@@ -9,23 +10,21 @@ const CopyLink: FC<
     infoDelay?: number;
   }
 > = (props) => {
-  let { textToCopy, infoDelay, ...filteredProps } = omit(props, "onClick");
-
-  let [showConfirm, setShowConfirm] = useState(false);
-
-  useEffect(() => {
-    if (showConfirm) setTimeout(() => setShowConfirm(false), infoDelay ?? 1000);
-  }, [showConfirm]);
+  let { textToCopy, infoDelay, className, ...filteredProps } = omit(
+    props,
+    "onClick"
+  );
 
   let handleClick = () =>
-    navigator.clipboard
-      .writeText(props.textToCopy)
-      .then(() => setShowConfirm(true));
+    navigator.clipboard.writeText(props.textToCopy).then(() => {
+      toast("Copied !", { duration: 2e3 });
+    });
 
   return (
     <span
       {...filteredProps}
-      children={!showConfirm ? props.children : "Copied !"}
+      className={className}
+      children={props.children}
       onClick={handleClick}
     />
   );
