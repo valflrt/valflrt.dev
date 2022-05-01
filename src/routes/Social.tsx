@@ -7,12 +7,12 @@ const Social = () => {
       <ul>
         <li>
           <a className={"link"} href="https://gh.valflrt.dev">
-            github
+            Github account
           </a>
         </li>
         <li>
           <CopyLink className={"link"} textToCopy="valflrt#8436">
-            discord: valflrt#8436
+            Discord: valflrt#8436
           </CopyLink>
         </li>
       </ul>
