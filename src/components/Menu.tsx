@@ -7,11 +7,9 @@ const Menu = () => (
     <Link className={"link"} to="/">
       Home
     </Link>
-
     <Link className={"link"} to="/projects">
       Projects
     </Link>
-
     <Link className={"link"} to="/social">
       Social
     </Link>

@@ -8,13 +8,11 @@ import { css, isMobile } from "../utils";
 import "./Layout.scss";
 
 const Layout: FC = ({ children }) => (
-  <>
-    <div className={css.j("layout", isMobile() ? "mobile" : "desktop")}>
-      <Toaster position="top-right" toastOptions={{ className: "toast" }} />
-      {children}
-      <Menu />
-    </div>
-  </>
+  <div className={css.j("layout", isMobile() ? "mobile" : "desktop")}>
+    <Toaster position="top-right" toastOptions={{ className: "toast" }} />
+    {children}
+    <Menu />
+  </div>
 );
 
 export default Layout;
