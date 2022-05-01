@@ -2,15 +2,15 @@ import ReactDOM from "react-dom";
 
 import { HashRouter } from "react-router-dom";
 
-import Router from "./router/Router";
+import Routes from "./routes";
 import Layout from "./layout/Layout";
 
-import "./globalStyles.css";
+import "./globalStyles.scss";
 
 ReactDOM.render(
   <HashRouter>
     <Layout>
-      <Router />
+      <Routes />
     </Layout>
   </HashRouter>,
   document.getElementById("root")
