@@ -1,4 +1,4 @@
-.main{cursor:default;display:flex;flex-flow:column nowrap;align-items:center;justify-content:center}.main h1,.main p{text-align:center}
+.main{cursor:default;display:flex;flex-flow:column nowrap;align-items:center;justify-content:center;animation:spawn 500ms 1}.main h1,.main p{text-align:center}@keyframes spawn{0%{transform:scale(0.8);opacity:0}100%{transform:scale(1);opacity:1}}
 
 .menu{top:20px;left:20px;position:fixed;display:flex;flex-flow:column;align-items:flex-start;justify-content:flex-start}.menu>*:not(:last-child){margin-bottom:4px}
 
