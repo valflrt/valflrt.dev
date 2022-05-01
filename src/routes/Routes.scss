@@ -1,0 +1,13 @@
+.main {
+  cursor: default;
+
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+
+  h1,
+  p {
+    text-align: center;
+  }
+}

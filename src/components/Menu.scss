@@ -1,0 +1,15 @@
+.menu {
+  top: 20px;
+  left: 20px;
+
+  position: fixed;
+
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  & > *:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
