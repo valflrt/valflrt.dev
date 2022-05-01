@@ -4,7 +4,9 @@ const NotFound = () => (
   <>
     <h1>404</h1>
     <p>There's nothing here !</p>
-    <Link to={"/"}>Back home</Link>
+    <Link className={"link"} to={"/"}>
+      Back home
+    </Link>
   </>
 );
 
