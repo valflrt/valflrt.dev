@@ -3,7 +3,7 @@ import TimedRouterLink from "../particles/TimedRouterLink";
 import "./Menu.scss";
 
 const Menu = () => {
-  let timeout = 500;
+  let timeout = 550;
   let onTimeoutStart = () =>
     document.querySelector(".main")?.classList.add("disappearing");
 
