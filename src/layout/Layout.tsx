@@ -9,7 +9,7 @@ import "./Layout.scss";
 
 const Layout: React.FC = ({ children }) => (
   <div className={css.j("layout", isMobile() ? "mobile" : "desktop")}>
-    <Toaster position="top-right" toastOptions={{ className: "toast" }} />
+    <Toaster position={"top-right"} toastOptions={{ className: "toast" }} />
     {children}
     <Menu />
   </div>

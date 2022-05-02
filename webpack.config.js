@@ -102,4 +102,7 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
   },
+  devServer: {
+    allowedHosts: [".gitpod.io"],
+  },
 };

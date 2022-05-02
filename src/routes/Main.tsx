@@ -7,7 +7,7 @@ const Main = () => (
       <li>A coding and self-deprecation enthusiast</li>
       <li>
         I was born at{" "}
-        <CopyLink className={"link"} textToCopy="1108087200">
+        <CopyLink className={"link"} textToCopy={"1108087200"}>
           <code>1108087200</code>
         </CopyLink>{" "}
         (Unix Epoch)

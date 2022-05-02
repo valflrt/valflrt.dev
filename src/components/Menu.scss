@@ -1,6 +1,11 @@
 .menu {
-  top: 20px;
-  left: 20px;
+  top: 0;
+  left: 0;
+
+  padding: 20px 10px;
+
+  border-bottom-right-radius: 8px;
+  background-color: var(--primary-tone-055);
 
   position: fixed;
 
@@ -9,7 +14,18 @@
   align-items: flex-start;
   justify-content: flex-start;
 
-  & > *:not(:last-child) {
-    margin-bottom: 4px;
+  .links {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    * {
+      padding: 4px 8px;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 4px;
+    }
   }
 }

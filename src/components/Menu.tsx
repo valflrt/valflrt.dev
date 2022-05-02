@@ -6,21 +6,27 @@ const Menu = () => {
   let otherLinkProps = {
     timeout: 450,
     onTimeoutStart: () =>
-      document.querySelector(".main")?.classList.add("disappearing"),
+      document
+        .querySelector("#root > .layout > .main")
+        ?.classList.add("disappearing"),
     className: "link",
   };
 
   return (
-    <div className={"menu"}>
-      <TimedRouterLink to="/" {...otherLinkProps}>
-        Home
-      </TimedRouterLink>
-      <TimedRouterLink to="/projects" {...otherLinkProps}>
-        Projects
-      </TimedRouterLink>
-      <TimedRouterLink to="/social" {...otherLinkProps}>
-        Social
-      </TimedRouterLink>
+    <div className={"menuWrapper"}>
+      <div className={"menu"}>
+        <div className={"links"}>
+          <TimedRouterLink to={"/"} {...otherLinkProps}>
+            Home
+          </TimedRouterLink>
+          <TimedRouterLink to={"/projects"} {...otherLinkProps}>
+            Projects
+          </TimedRouterLink>
+          <TimedRouterLink to={"/social"} {...otherLinkProps}>
+            Social
+          </TimedRouterLink>
+        </div>
+      </div>
     </div>
   );
 };
