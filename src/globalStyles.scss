@@ -10,13 +10,13 @@ body {
   box-sizing: border-box;
 }
 
-::-moz-selection {
-  color: var(--primary-tone-090);
-  background: #473d7acc;
-}
 ::selection {
   color: var(--primary-tone-090);
-  background: #473d7acc;
+  background: #30295180;
+}
+::-moz-selection {
+  color: var(--primary-tone-090);
+  background: #30295180;
 }
 
 :root {
@@ -132,4 +132,5 @@ ul {
   text-shadow: none;
   color: var(--monochrome-tone-095) !important;
   background-color: var(--primary-tone-035) !important;
+  cursor: default;
 }
