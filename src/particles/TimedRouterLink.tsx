@@ -14,7 +14,8 @@ const TimedRouterLink: React.FC<
 
   let ref = React.createRef<HTMLSpanElement>();
 
-  let handleClick = () => {
+  let handleClick: React.MouseEventHandler<HTMLSpanElement> = (e) => {
+    e.preventDefault();
     if (location.pathname === to) return;
     if (onTimeoutStart) onTimeoutStart(ref);
     setTimeout(() => navigate(to), timeout ?? 1e3); // default is 1s

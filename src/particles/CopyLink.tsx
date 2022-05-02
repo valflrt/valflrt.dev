@@ -10,10 +10,12 @@ const CopyLink: React.FC<
 > = (props) => {
   let { textToCopy, infoDelay, ...filteredProps } = props;
 
-  let handleClick = () =>
+  let handleClick: React.MouseEventHandler<HTMLSpanElement> = (e) => {
+    e.preventDefault();
     navigator.clipboard.writeText(props.textToCopy).then(() => {
       toast("Copied !", { duration: 2e3 });
     });
+  };
 
   return <span onClick={handleClick} {...filteredProps} />;
 };
