@@ -9,7 +9,7 @@ const NotFound = React.lazy(() => import("./NotFound"));
 import "./Routes.scss";
 
 const Routes = () => (
-  <Suspense fallback={<>Loading ...</>}>
+  <Suspense fallback={null}>
     <RouteGroup>
       <Route path={"/"} element={<Main />} />
       <Route path={"/projects"} element={<Projects />} />
