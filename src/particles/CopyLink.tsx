@@ -1,9 +1,9 @@
-import { FC, HTMLProps } from "react";
+import React from "react";
 import toast from "react-hot-toast";
 
 // Used to create a link that copies some text to clipboard
-const CopyLink: FC<
-  Omit<HTMLProps<HTMLSpanElement>, "onClick"> & {
+const CopyLink: React.FC<
+  Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
     textToCopy: string;
     infoDelay?: number;
   }
