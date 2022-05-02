@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkProps, useNavigate } from "react-router-dom";
+import { LinkProps, useLocation, useNavigate } from "react-router-dom";
 
 // Used to create a link that has a timeout before redirect
 const TimedRouterLink: React.FC<
@@ -10,10 +10,12 @@ const TimedRouterLink: React.FC<
 > = (props) => {
   let { to, timeout, onTimeoutStart, ...filteredProps } = props;
   let navigate = useNavigate();
+  let location = useLocation();
 
   let ref = React.createRef<HTMLSpanElement>();
 
   let handleClick = () => {
+    if (location.pathname === to) return;
     if (onTimeoutStart) onTimeoutStart(ref);
     setTimeout(() => navigate(to), timeout ?? 1e3); // default is 1s
   };
