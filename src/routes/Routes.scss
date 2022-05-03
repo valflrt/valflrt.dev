@@ -13,6 +13,14 @@
     text-align: center;
   }
 
+  h1 {
+    font-size: 2.2rem;
+
+    .mobile & {
+      font-size: 2rem;
+    }
+  }
+
   @keyframes spawn {
     0% {
       transform: scale(0.8);
