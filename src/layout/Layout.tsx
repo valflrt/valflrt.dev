@@ -1,7 +1,7 @@
 import React from "react";
 import { Toaster } from "react-hot-toast";
 
-import { useIsMobile } from "../hooks";
+import useIsMobile from "../hooks/useIsMobile";
 
 import Menu from "../components/Menu";
 
