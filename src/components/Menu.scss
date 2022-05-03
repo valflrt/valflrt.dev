@@ -8,10 +8,8 @@
   position: fixed;
 
   display: flex;
-  .desktop & {
-    align-items: center;
-    justify-content: center;
-  }
+  align-items: center;
+  justify-content: center;
 
   .mobile & {
     align-items: flex-start;
@@ -36,15 +34,20 @@
 
       .link {
         padding: 4px 8px;
-      }
-
-      & > .link:not(:last-child) {
-        margin-bottom: 4px;
-      }
-
-      .link.focused {
-        background-color: var(--primary-tone-040);
         border-radius: 8px;
+        transition: background-color 500ms;
+
+        .mobile & {
+          padding: 5px 10px;
+        }
+
+        &.focused {
+          background-color: var(--primary-tone-040);
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 4px;
+        }
       }
     }
   }
