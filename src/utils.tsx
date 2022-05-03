@@ -6,11 +6,6 @@ export let omit = <T extends { [key: string]: any }, K extends string>(
   return rest;
 };
 
-export let isMobile = () =>
-  "ontouchstart" in window ||
-  navigator.maxTouchPoints > 0 ||
-  window.innerWidth < window.innerHeight + 100;
-
 export let css = {
   /**
    * Joins class names
