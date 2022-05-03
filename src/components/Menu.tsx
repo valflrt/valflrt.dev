@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useMatch } from "react-router-dom";
 
 import TimedRouterLink from "../particles/TimedRouterLink";
 
@@ -8,8 +7,6 @@ import { css } from "../utils";
 import "./Menu.scss";
 
 const Menu = () => {
-  let location = useLocation();
-
   let otherLinkProps = {
     timeout: 450,
     onTimeoutStart: () =>
@@ -27,7 +24,7 @@ const Menu = () => {
             className={css.j(
               "link",
               "noUnderlining",
-              location.pathname === "/" ? "focused" : ""
+              useMatch({ path: "/", end: true }) ? "focused" : ""
             )}
             {...otherLinkProps}
           >
@@ -38,7 +35,7 @@ const Menu = () => {
             className={css.j(
               "link",
               "noUnderlining",
-              location.pathname === "/projects" ? "focused" : ""
+              useMatch({ path: "/projects", end: true }) ? "focused" : ""
             )}
             {...otherLinkProps}
           >
@@ -49,7 +46,7 @@ const Menu = () => {
             className={css.j(
               "link",
               "noUnderlining",
-              location.pathname === "/social" ? "focused" : ""
+              useMatch({ path: "/social", end: true }) ? "focused" : ""
             )}
             {...otherLinkProps}
           >
