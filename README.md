@@ -1,3 +1,3 @@
-# beta.valflrt.dev
+# valflrt.dev
 
 My new website
