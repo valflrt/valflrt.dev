@@ -34,12 +34,19 @@
       align-items: flex-start;
       justify-content: flex-start;
 
-      * {
+      .link {
         padding: 4px 8px;
+        transition: 200ms;
+        background-color: transparent;
       }
 
-      & > *:not(:last-child) {
+      & > .link:not(:last-child) {
         margin-bottom: 4px;
+      }
+
+      .link.focused {
+        background-color: var(--primary-tone-040);
+        border-radius: 8px;
       }
     }
   }
