@@ -37,16 +37,14 @@ export let useResize = () => {
 
 export let useIsMobile = () => {
   let [isMobile, setIsMobile] = useState(false);
-  let size = useResize();
 
-  useEffect(() => {
+  useWindowEvent("resize", () => {
     setIsMobile(
       "ontouchstart" in window ||
         navigator.maxTouchPoints > 0 ||
         window.innerWidth < window.innerHeight + 100
     );
-    console.log(isMobile);
-  }, [size]);
+  });
 
   return isMobile;
 };
