@@ -13,7 +13,7 @@ const Main = () => (
         (Unix Epoch)
       </li>
       <li>I'm French and proud to be (oui oui baguette)</li>
-      <li>I like TypeScript and NodeJS</li>
+      <li>I like TypeScript</li>
     </ul>
   </div>
 );
