@@ -92,7 +92,7 @@ h3,
 h4,
 h5,
 h6 {
-  text-shadow: 0 1px 0 var(--primary-tone-045);
+  text-shadow: 0 2px 0 var(--primary-tone-040);
 }
 
 a {
@@ -116,6 +116,10 @@ ul {
   color: var(--primary-tone-090);
   text-decoration: underline;
   cursor: pointer;
+}
+
+.link.noUnderlining {
+  text-decoration: inherit;
 }
 
 .mobile {
