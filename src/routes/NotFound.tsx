@@ -1,15 +1,24 @@
-import { Link } from "react-router-dom";
+import TimedRouterLink from "../particles/TimedRouterLink";
 
 import "./NotFound.scss";
 
 const NotFound = () => (
-  <>
+  <div className={"main"}>
     <h1 className={"fortyHundredAndFour"}>404</h1>
     <p>There's nothing here !</p>
-    <Link className={"link"} to={"/"}>
+    <TimedRouterLink
+      className={"link"}
+      to={"/"}
+      timeout={450}
+      onTimeoutStart={() =>
+        document
+          .querySelector("#root > .layout > .main")
+          ?.classList.add("disappearing")
+      }
+    >
       Back home
-    </Link>
-  </>
+    </TimedRouterLink>
+  </div>
 );
 
 export default NotFound;
