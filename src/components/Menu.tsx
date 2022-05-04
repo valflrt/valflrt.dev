@@ -13,7 +13,6 @@ import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
 const Menu = () => {
   let isMobile = useIsMobile();
   let [isMenuHidden, setIsMenuHidden] = useState(true);
-  let menuRef = React.createRef<HTMLDivElement>();
   let toggleRef = React.createRef<HTMLDivElement>();
 
   let otherLinkProps = {
@@ -30,8 +29,7 @@ const Menu = () => {
 
   useClickOutsideEffect<HTMLDivElement>(
     () => !isMenuHidden && setIsMenuHidden(true),
-    menuRef,
-    [toggleRef]
+    toggleRef
   );
 
   return (
@@ -43,10 +41,7 @@ const Menu = () => {
       >
         <ArrowLeft size={!isMobile ? 20 : 28} />
       </div>
-      <div
-        ref={menuRef}
-        className={css.j("menu", isMenuHidden ? "hidden" : "")}
-      >
+      <div className={css.j("menu", isMenuHidden ? "hidden" : "")}>
         <div className={"links"}>
           <TimedRouterLink
             to={"/"}
