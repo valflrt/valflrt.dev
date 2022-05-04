@@ -8,14 +8,32 @@
   position: fixed;
 
   display: flex;
+  flex-flow: column nowrap;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   pointer-events: none;
 
-  .mobile & {
-    align-items: flex-start;
-    justify-content: center;
+  & > * {
+    pointer-events: all;
+  }
+
+  .toggle {
+    margin-bottom: 4px;
+    align-self: flex-start;
+    cursor: pointer;
+
+    .mobile & {
+      padding: 2px 6px;
+    }
+
+    & > svg {
+      transition: 200ms;
+    }
+
+    &.rotated > svg {
+      transform: rotate(-180deg);
+    }
   }
 
   .menu {
@@ -29,7 +47,13 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    pointer-events: all;
+    transition: 200ms;
+
+    &.hidden {
+      transform: scale(0);
+      transform-origin: left;
+      opacity: 0;
+    }
 
     .links {
       display: flex;

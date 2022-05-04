@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { useMatch } from "react-router-dom";
+import { ArrowLeft } from "react-feather";
 
 import TimedRouterLink from "../particles/TimedRouterLink";
 
@@ -7,6 +9,8 @@ import { css } from "../utils";
 import "./Menu.scss";
 
 const Menu = () => {
+  let [isMenuHidden, setIsMenuHidden] = useState(false);
+
   let otherLinkProps = {
     timeout: 450,
     onTimeoutStart: () =>
@@ -17,7 +21,13 @@ const Menu = () => {
 
   return (
     <div className={"menuWrapper"}>
-      <div className={"menu"}>
+      <div
+        onClick={() => setIsMenuHidden((v) => !v)}
+        className={css.j("toggle", isMenuHidden ? "rotated" : "")}
+      >
+        <ArrowLeft size={20} />
+      </div>
+      <div className={css.j("menu", isMenuHidden ? "hidden" : "")}>
         <div className={"links"}>
           <TimedRouterLink
             to={"/"}
