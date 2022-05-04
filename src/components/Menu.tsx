@@ -1,15 +1,20 @@
-import { useState } from "react";
+import React, { MouseEvent, useEffect, useState } from "react";
 import { useMatch } from "react-router-dom";
 import { ArrowLeft } from "react-feather";
 
+import useIsMobile from "../hooks/useIsMobile";
 import TimedRouterLink from "../particles/TimedRouterLink";
 
 import { css } from "../utils";
 
 import "./Menu.scss";
+import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
 
 const Menu = () => {
-  let [isMenuHidden, setIsMenuHidden] = useState(false);
+  let isMobile = useIsMobile();
+  let [isMenuHidden, setIsMenuHidden] = useState(true);
+  let menuRef = React.createRef<HTMLDivElement>();
+  let toggleRef = React.createRef<HTMLDivElement>();
 
   let otherLinkProps = {
     timeout: 450,
@@ -19,15 +24,29 @@ const Menu = () => {
         ?.classList.add("disappearing"),
   };
 
+  useEffect(() => {
+    console.log(toggleRef);
+  }, [toggleRef]);
+
+  useClickOutsideEffect<HTMLDivElement>(
+    () => !isMenuHidden && setIsMenuHidden(true),
+    menuRef,
+    [toggleRef]
+  );
+
   return (
     <div className={"menuWrapper"}>
       <div
-        onClick={() => setIsMenuHidden((v) => !v)}
+        ref={toggleRef}
         className={css.j("toggle", isMenuHidden ? "rotated" : "")}
+        onClick={() => setIsMenuHidden((s) => !s)}
       >
-        <ArrowLeft size={20} />
+        <ArrowLeft size={!isMobile ? 20 : 28} />
       </div>
-      <div className={css.j("menu", isMenuHidden ? "hidden" : "")}>
+      <div
+        ref={menuRef}
+        className={css.j("menu", isMenuHidden ? "hidden" : "")}
+      >
         <div className={"links"}>
           <TimedRouterLink
             to={"/"}
