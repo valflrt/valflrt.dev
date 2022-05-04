@@ -4,20 +4,10 @@ import { useWindowEvent } from "./useWindowEvent";
 
 let useClickOutsideEffect = <refElementType extends HTMLElement>(
   callback: (event: MouseEvent) => any,
-  ref: React.RefObject<refElementType>,
-  excludeRefs: React.RefObject<HTMLElement>[] = []
+  ref: React.RefObject<refElementType>
 ) => {
   let handleClickOutside = (e: MouseEvent) => {
-    e.preventDefault();
-
-    if (
-      ref.current &&
-      !ref.current.contains(e.target as Node) &&
-      !excludeRefs
-        .map((ref) => ref.current?.isSameNode(e.target as Node))
-        .some((v) => !!v)
-    )
-      callback(e);
+    if (ref.current && !ref.current.contains(e.target as Node)) callback(e);
   };
 
   useWindowEvent("click", handleClickOutside);
