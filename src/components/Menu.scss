@@ -19,7 +19,8 @@
   .menu {
     padding: 10px;
 
-    border-left: 4px solid var(--primary-tone-060);
+    background-color: var(--primary-tone-055);
+    border-radius: 8px;
 
     display: flex;
     flex-flow: column;
