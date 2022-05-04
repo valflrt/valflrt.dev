@@ -11,6 +11,8 @@
   align-items: center;
   justify-content: center;
 
+  pointer-events: none;
+
   .mobile & {
     align-items: flex-start;
     justify-content: center;
@@ -26,6 +28,8 @@
     flex-flow: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+    pointer-events: all;
 
     .links {
       display: flex;
