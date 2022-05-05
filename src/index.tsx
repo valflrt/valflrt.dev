@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { HashRouter } from "react-router-dom";
 
 import Routes from "./routes";
-import Layout from "./layout/Layout";
+import Layout from "./components/Layout";
 
 import "./globalStyles.scss";
 
