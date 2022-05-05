@@ -61,7 +61,7 @@ body {
   --monochrome-tone-095: #f1f1f4;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lobster&display=swap");
 
 html {
   font-size: 16px;
@@ -75,7 +75,7 @@ html {
 
   color: var(--monochrome-tone-095);
   background-color: var(--primary-tone-050);
-  font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Cabin", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden auto;
   scroll-behavior: smooth;
 }
