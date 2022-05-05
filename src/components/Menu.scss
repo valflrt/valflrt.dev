@@ -23,12 +23,20 @@
     align-self: flex-start;
     cursor: pointer;
 
-    .mobile & {
+    .tactile & {
       padding: 2px 6px;
     }
 
     & > svg {
+      width: 20px;
+      height: 20px;
+
       transition: 200ms;
+
+      .tactile & {
+        width: 28px;
+        height: 28px;
+      }
     }
 
     &.rotated > svg {
@@ -68,7 +76,7 @@
         border-radius: 8px;
         transition: background-color 500ms;
 
-        .mobile & {
+        .tactile & {
           padding: 5px 10px;
         }
 

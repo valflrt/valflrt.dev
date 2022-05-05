@@ -23,10 +23,6 @@ const Menu = () => {
         ?.classList.add("disappearing"),
   };
 
-  useEffect(() => {
-    console.log(toggleRef);
-  }, [toggleRef]);
-
   useClickOutsideEffect<HTMLDivElement>(
     () => !isMenuHidden && setIsMenuHidden(true),
     toggleRef
@@ -39,7 +35,7 @@ const Menu = () => {
         className={css.j("toggle", isMenuHidden ? "rotated" : "")}
         onClick={() => setIsMenuHidden((s) => !s)}
       >
-        <ArrowLeft size={!isMobile ? 20 : 28} />
+        <ArrowLeft />
       </div>
       <div className={css.j("menu", isMenuHidden ? "hidden" : "")}>
         <div className={"links"}>
