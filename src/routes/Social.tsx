@@ -1,6 +1,8 @@
 import CopyLink from "../particles/CopyLink";
 
 const Social = () => {
+  document.title = "Social – valflrt.dev";
+
   return (
     <div className={"main"}>
       <h1>Social Links</h1>
