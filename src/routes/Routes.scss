@@ -14,7 +14,10 @@
   }
 
   h1 {
-    font-size: 2.2rem;
+    font-size: 2.6rem;
+    font-family: "Lobster";
+    letter-spacing: 1px;
+    text-shadow: 0.025em 0.1em 0 var(--primary-tone-040);
 
     .mobile & {
       font-size: 2rem;
