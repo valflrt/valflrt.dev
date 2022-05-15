@@ -15,6 +15,14 @@ const Projects = () => {
             A React template
           </a>
         </li>
+        <li>
+          <a
+            className={"link"}
+            href={"https://gh.valflrt.dev/encrypt-directory"}
+          >
+            A directory encrypting tool
+          </a>
+        </li>
       </ul>
     </div>
   );
