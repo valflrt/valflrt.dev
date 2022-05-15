@@ -1,91 +1,106 @@
-.menuWrapper {
+.menuWrapperWrapper {
   height: 100%;
+  width: 100%;
   top: 0;
   left: 0;
-
-  padding: 10px;
 
   position: fixed;
 
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
 
   pointer-events: none;
 
-  & > * {
-    pointer-events: all;
-  }
+  .menuWrapper {
+    height: 100%;
+    width: 100%;
 
-  .toggle {
-    margin-bottom: 4px;
-    align-self: flex-start;
-    cursor: pointer;
-
-    .tactile & {
-      padding: 2px 6px;
-    }
-
-    & > svg {
-      width: 20px;
-      height: 20px;
-
-      transition: 200ms;
-
-      .tactile & {
-        width: 28px;
-        height: 28px;
-      }
-    }
-
-    &.rotated > svg {
-      transform: rotate(-180deg);
-    }
-  }
-
-  .menu {
     padding: 10px;
 
-    background-color: var(--primary-tone-055);
-    border-radius: 8px;
-
-    user-select: none;
-
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
     align-items: flex-start;
     justify-content: flex-start;
 
-    transition: 200ms;
-
-    &.hidden {
-      transform: scale(0);
-      transform-origin: left;
-      opacity: 0;
+    & > * {
+      pointer-events: all;
     }
 
-    .links {
+    .desktop & {
+      padding: 25px;
+    }
+
+    .toggle {
+      margin-bottom: 4px;
+      align-self: flex-start;
+      cursor: pointer;
+
+      .tactile & {
+        padding: 2px 6px;
+      }
+
+      & > svg {
+        width: 20px;
+        height: 20px;
+
+        transition: 200ms;
+
+        .tactile & {
+          width: 28px;
+          height: 28px;
+        }
+      }
+
+      &.rotated > svg {
+        transform: rotate(-180deg);
+      }
+    }
+
+    .menu {
+      padding: 10px;
+
+      background-color: var(--primary-tone-055);
+      border-radius: 8px;
+
+      user-select: none;
+
       display: flex;
       flex-flow: column;
       align-items: flex-start;
       justify-content: flex-start;
 
-      .link {
-        padding: 4px 8px;
-        border-radius: 8px;
-        transition: background-color 500ms;
+      transition: 200ms;
 
-        .tactile & {
-          padding: 5px 10px;
-        }
+      &.hidden {
+        transform: scale(0);
+        transform-origin: left;
+        opacity: 0;
+      }
 
-        &.focused {
-          background-color: var(--primary-tone-040);
-        }
+      .links {
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: flex-start;
 
-        &:not(:last-child) {
-          margin-bottom: 4px;
+        .link {
+          padding: 4px 8px;
+          border-radius: 8px;
+          transition: background-color 500ms;
+
+          .tactile & {
+            padding: 5px 10px;
+          }
+
+          &.focused {
+            background-color: var(--primary-tone-040);
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 4px;
+          }
         }
       }
     }
