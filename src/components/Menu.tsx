@@ -63,15 +63,17 @@ const Menu = () => {
               Projects
             </TimedRouterLink>
             <TimedRouterLink
-              to={"/social"}
+              to={"/external-links"}
               className={css.j(
                 "link",
                 "noUnderlining",
-                useMatch({ path: "/social", end: true }) ? "focused" : ""
+                useMatch({ path: "/external-links", end: true })
+                  ? "focused"
+                  : ""
               )}
               {...otherLinkProps}
             >
-              Social
+              External Links
             </TimedRouterLink>
           </div>
         </div>

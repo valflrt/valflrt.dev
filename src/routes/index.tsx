@@ -3,7 +3,7 @@ import { Route, Routes as RouteGroup } from "react-router-dom";
 
 const Main = React.lazy(() => import("./Main"));
 const Projects = React.lazy(() => import("./Projects"));
-const Social = React.lazy(() => import("./Social"));
+const ExternalLinks = React.lazy(() => import("./ExternalLinks"));
 const NotFound = React.lazy(() => import("./NotFound"));
 
 import "./Routes.scss";
@@ -13,7 +13,7 @@ const Routes = () => (
     <RouteGroup>
       <Route path={"/"} element={<Main />} />
       <Route path={"/projects"} element={<Projects />} />
-      <Route path={"/social"} element={<Social />} />
+      <Route path={"/external-links"} element={<ExternalLinks />} />
       <Route path={"*"} element={<NotFound />} />
     </RouteGroup>
   </React.Suspense>

@@ -1,11 +1,11 @@
 import CopyLink from "../particles/CopyLink";
 
-const Social = () => {
-  document.title = "Social – valflrt.dev";
+const ExternalLinks = () => {
+  document.title = "External Links – valflrt.dev";
 
   return (
     <div className={"main"}>
-      <h1>Social Links</h1>
+      <h1>External Links</h1>
       <ul>
         <li>
           <a className={"link"} href={"https://gh.valflrt.dev"}>
@@ -22,4 +22,4 @@ const Social = () => {
   );
 };
 
-export default Social;
+export default ExternalLinks;
