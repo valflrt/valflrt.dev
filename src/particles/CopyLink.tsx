@@ -8,7 +8,7 @@ const CopyLink: React.FC<
     infoDelay?: number;
   }
 > = (props) => {
-  let { textToCopy, infoDelay, ...filteredProps } = props;
+  let { textToCopy, infoDelay, title, ...filteredProps } = props;
 
   let handleClick: React.MouseEventHandler<HTMLSpanElement> = (e) => {
     e.preventDefault();
@@ -17,7 +17,9 @@ const CopyLink: React.FC<
     });
   };
 
-  return <span onClick={handleClick} {...filteredProps} />;
+  return (
+    <span onClick={handleClick} title={"Click to copy"} {...filteredProps} />
+  );
 };
 
 export default CopyLink;
