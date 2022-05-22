@@ -59,6 +59,9 @@ body {
   --monochrome-tone-085: #d6d5dd;
   --monochrome-tone-090: #e4e3e8;
   --monochrome-tone-095: #f1f1f4;
+
+  --default-box-shadow: 0 3px 10px rgba(36, 31, 61, 0.05),
+    0 3px 3px rgba(36, 31, 61, 0.025);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lobster&family=Roboto+Mono&display=swap");
@@ -126,7 +129,7 @@ ul {
 .toast {
   color: inherit !important;
   background-color: var(--primary-tone-055) !important;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05), 0 3px 3px rgba(0, 0, 0, 0.025);
+  box-shadow: var(--default-box-shadow);
   border-radius: 8px;
   font: inherit;
   cursor: default;
