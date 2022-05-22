@@ -33,17 +33,24 @@
     }
 
     .toggle {
-      margin-bottom: 4px;
+      width: 36px;
+      height: 36px;
+
       align-self: flex-start;
       cursor: pointer;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       .tactile & {
-        padding: 2px 6px;
+        width: 40px;
+        height: 40px;
       }
 
       & > svg {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
 
         transition: 200ms;
 
