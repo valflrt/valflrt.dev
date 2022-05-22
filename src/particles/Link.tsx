@@ -1,16 +1,17 @@
-import React from "react";
+import BaseLink from "./BaseLink";
 
-const Link: React.FC<
-  Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & { to: string | URL }
+const RouterLink: React.FC<
+  Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
+    to: string | URL;
+  }
 > = (props) => {
   let { to, ...filteredProps } = props;
 
-  let handleClick: React.MouseEventHandler<HTMLSpanElement> = (e) => {
-    e.preventDefault();
+  let toDo = () => {
     window.location.assign(to);
   };
 
-  return <span onClick={handleClick} {...filteredProps} />;
+  return <BaseLink toDo={toDo} {...filteredProps} />;
 };
 
-export default Link;
+export default RouterLink;

@@ -1,25 +1,24 @@
 import React from "react";
 import toast from "react-hot-toast";
 
+import BaseLink from "./BaseLink";
+
 // Used to create a link that copies some text to clipboard
 const CopyLink: React.FC<
   Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
     textToCopy: string;
-    infoDelay?: number;
+    notificationTimeout?: number;
   }
 > = (props) => {
-  let { textToCopy, infoDelay, title, ...filteredProps } = props;
+  let { textToCopy, notificationTimeout, ...filteredProps } = props;
 
-  let handleClick: React.MouseEventHandler<HTMLSpanElement> = (e) => {
-    e.preventDefault();
+  let toDo = () => {
     navigator.clipboard.writeText(props.textToCopy).then(() => {
-      toast("Copied !", { duration: 2e3 });
+      toast("Copied !", { duration: notificationTimeout ?? 2e3 });
     });
   };
 
-  return (
-    <span onClick={handleClick} title={"Click to copy"} {...filteredProps} />
-  );
+  return <BaseLink toDo={toDo} {...filteredProps} />;
 };
 
 export default CopyLink;
