@@ -1,4 +1,6 @@
 .main {
+  max-width: 80%;
+
   cursor: default;
 
   display: flex;
@@ -21,6 +23,15 @@
 
     .mobile & {
       font-size: 2rem;
+    }
+  }
+
+  li {
+    .tactile & {
+      padding-bottom: 3px;
+      &:last-child {
+        padding-bottom: 0;
+      }
     }
   }
 
