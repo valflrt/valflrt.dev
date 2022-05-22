@@ -1,27 +1,17 @@
-import React, { MouseEvent, useEffect, useState } from "react";
-import { useMatch } from "react-router-dom";
+import React, { useState } from "react";
 import { ArrowLeft } from "react-feather";
 
-import useIsMobile from "../hooks/useIsMobile";
 import TimedRouterLink from "../particles/TimedRouterLink";
-
-import { css } from "../utils";
-
-import "./Menu.scss";
 import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
 
+import { css } from "../utils";
+import { TimedRouterLinkDefaultProps } from "../misc";
+
+import "./Menu.scss";
+
 const Menu = () => {
-  let isMobile = useIsMobile();
   let [isMenuHidden, setIsMenuHidden] = useState(true);
   let toggleRef = React.createRef<HTMLDivElement>();
-
-  let otherLinkProps = {
-    timeout: 450,
-    onTimeoutStart: () =>
-      document
-        .querySelector("#root > .layout > .main")
-        ?.classList.add("disappearing"),
-  };
 
   useClickOutsideEffect<HTMLDivElement>(
     () => !isMenuHidden && setIsMenuHidden(true),
@@ -42,36 +32,28 @@ const Menu = () => {
           <div className={"links"}>
             <TimedRouterLink
               to={"/"}
-              className={css.j(
-                "link",
-                "noUnderlining",
-                useMatch({ path: "/", end: true }) ? "focused" : ""
-              )}
-              {...otherLinkProps}
+              className={(isFocused) =>
+                css.j("link", "noUnderlining", isFocused ? "focused" : "")
+              }
+              {...TimedRouterLinkDefaultProps}
             >
               Main
             </TimedRouterLink>
             <TimedRouterLink
               to={"/projects"}
-              className={css.j(
-                "link",
-                "noUnderlining",
-                useMatch({ path: "/projects", end: true }) ? "focused" : ""
-              )}
-              {...otherLinkProps}
+              className={(isFocused) =>
+                css.j("link", "noUnderlining", isFocused ? "focused" : "")
+              }
+              {...TimedRouterLinkDefaultProps}
             >
               Projects
             </TimedRouterLink>
             <TimedRouterLink
               to={"/external-links"}
-              className={css.j(
-                "link",
-                "noUnderlining",
-                useMatch({ path: "/external-links", end: true })
-                  ? "focused"
-                  : ""
-              )}
-              {...otherLinkProps}
+              className={(isFocused) =>
+                css.j("link", "noUnderlining", isFocused ? "focused" : "")
+              }
+              {...TimedRouterLinkDefaultProps}
             >
               External Links
             </TimedRouterLink>
