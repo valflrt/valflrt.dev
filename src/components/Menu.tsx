@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowLeft } from "react-feather";
+import { ChevronLeft } from "react-feather";
 
 import TimedRouterLink from "../particles/TimedRouterLink";
 import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
@@ -26,7 +26,7 @@ const Menu = () => {
           className={css.j("toggle", isMenuHidden ? "rotated" : "")}
           onClick={() => setIsMenuHidden((s) => !s)}
         >
-          <ArrowLeft />
+          <ChevronLeft />
         </div>
         <div className={css.j("menu", isMenuHidden ? "hidden" : "")}>
           <div className={"links"}>
