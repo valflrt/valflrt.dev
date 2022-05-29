@@ -10,7 +10,9 @@ import "./index.scss";
 ReactDOM.render(
   <HashRouter>
     <Layout>
-      <Routes />
+      <div className={"main"}>
+        <Routes />
+      </div>
     </Layout>
   </HashRouter>,
   document.getElementById("root")

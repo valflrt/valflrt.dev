@@ -4,7 +4,7 @@ const ExternalLinks = () => {
   document.title = "External Links – valflrt.dev";
 
   return (
-    <div className={"main"}>
+    <>
       <h1>External Links</h1>
       <ul>
         <li>
@@ -18,7 +18,7 @@ const ExternalLinks = () => {
           </CopyLink>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

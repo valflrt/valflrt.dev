@@ -2,7 +2,7 @@ const Projects = () => {
   document.title = "Projects – valflrt.dev";
 
   return (
-    <div className={"main"}>
+    <>
       <h1>Some of my Projects</h1>
       <ul>
         <li>
@@ -24,7 +24,7 @@ const Projects = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </>
   );
 };
 

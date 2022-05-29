@@ -17,7 +17,7 @@ const Main = () => {
   };
 
   return (
-    <div className={"main"}>
+    <>
       <h1>Heya ! I'm valflrt !</h1>
       <ul>
         <li>A coding and self-deprecation enthusiast</li>
@@ -36,7 +36,7 @@ const Main = () => {
         <li>I'm French and proud to be (oui oui baguette)</li>
         <li>I like TypeScript</li>
       </ul>
-    </div>
+    </>
   );
 };
 
