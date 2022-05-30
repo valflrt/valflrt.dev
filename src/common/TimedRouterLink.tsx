@@ -3,16 +3,28 @@ import { LinkProps, useMatch, useNavigate } from "react-router-dom";
 
 import BaseLink from "./BaseLink";
 
+export type TimedRouterLinkProps = Omit<
+  LinkProps,
+  "onClick" | "to" | "className"
+> & {
+  to: string;
+  timeout?: number;
+  onTimeoutStart?: (ref: React.RefObject<HTMLSpanElement>) => any;
+  onTimeoutEnd?: () => any;
+  className?: (isFocused: boolean) => string;
+};
+
 // Used to create a link that has a timeout before redirect
-const TimedRouterLink: React.FC<
-  Omit<LinkProps, "onClick" | "to" | "className"> & {
-    to: string;
-    timeout?: number;
-    onTimeoutStart?: (ref: React.RefObject<HTMLSpanElement>) => any;
-    className?: (isFocused: boolean) => string;
-  }
-> = (props) => {
-  let { to, timeout, onTimeoutStart, className, ...filteredProps } = props;
+const TimedRouterLink: React.FC<TimedRouterLinkProps> = (props) => {
+  let {
+    to,
+    timeout,
+    onTimeoutStart,
+    onTimeoutEnd,
+    className,
+    ...filteredProps
+  } = props;
+
   let navigate = useNavigate();
   let isFocused = !!useMatch({ path: to, end: true });
 
@@ -20,11 +32,12 @@ const TimedRouterLink: React.FC<
 
   let toAwait = (r: () => void) => {
     if (onTimeoutStart) onTimeoutStart(ref);
-    setTimeout(r, timeout ?? 1e3);
+    setTimeout(r, timeout ?? 1e3); // waits for custom timeout if specified or for 1s
   };
 
   let handleClick = () => {
     if (isFocused) return;
+    if (onTimeoutEnd) onTimeoutEnd();
     navigate(to);
   };
 

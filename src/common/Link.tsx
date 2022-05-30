@@ -1,6 +1,6 @@
 import BaseLink from "./BaseLink";
 
-const RouterLink: React.FC<
+const Link: React.FC<
   Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
     to: string | URL;
   }
@@ -14,4 +14,4 @@ const RouterLink: React.FC<
   return <BaseLink toDo={toDo} {...filteredProps} />;
 };
 
-export default RouterLink;
+export default Link;
