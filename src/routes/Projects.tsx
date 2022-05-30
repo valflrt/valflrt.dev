@@ -11,7 +11,7 @@ const Projects = () => {
       <ul>
         <li>
           <Link
-            className={css.j("link", "underline")}
+            className={css.j("link", "underlined")}
             to={"https://gh.valflrt.dev/lejardinier"}
           >
             Le Jardinier (discord bot)
@@ -19,7 +19,7 @@ const Projects = () => {
         </li>
         <li>
           <Link
-            className={css.j("link", "underline")}
+            className={css.j("link", "underlined")}
             to={"https://gh.valflrt.dev/react-template"}
           >
             A React template
@@ -27,7 +27,7 @@ const Projects = () => {
         </li>
         <li>
           <Link
-            className={css.j("link", "underline")}
+            className={css.j("link", "underlined")}
             to={"https://gh.valflrt.dev/encrypt-directory"}
           >
             A directory encrypting tool

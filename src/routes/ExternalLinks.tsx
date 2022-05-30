@@ -11,7 +11,7 @@ const ExternalLinks = () => {
       <ul>
         <li>
           <a
-            className={css.j("link", "underline")}
+            className={css.j("link", "underlined")}
             href={"https://gh.valflrt.dev"}
           >
             Github account
@@ -19,7 +19,7 @@ const ExternalLinks = () => {
         </li>
         <li>
           <CopyLink
-            className={css.j("link", "underline")}
+            className={css.j("link", "underlined")}
             textToCopy={"valflrt#8436"}
           >
             Discord: valflrt#8436
