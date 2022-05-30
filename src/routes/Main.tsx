@@ -1,6 +1,4 @@
-import CopyLink from "../particles/CopyLink";
-
-import { css } from "../utils";
+import CopyLink from "../common/CopyLink";
 
 const Main = () => {
   document.title = "Home – valflrt.dev";
@@ -24,10 +22,7 @@ const Main = () => {
         <li>My real name is Valentin Fleurit</li>
         <li>
           I was born at{" "}
-          <CopyLink
-            className={css.j("link", "noUnderlining")}
-            textToCopy={"1108087200"}
-          >
+          <CopyLink className={"link"} textToCopy={"1108087200"}>
             <code>1108087200</code>
           </CopyLink>{" "}
           (Unix Epoch)

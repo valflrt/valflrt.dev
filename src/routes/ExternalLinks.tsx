@@ -1,4 +1,6 @@
-import CopyLink from "../particles/CopyLink";
+import CopyLink from "../common/CopyLink";
+
+import { css } from "../utils";
 
 const ExternalLinks = () => {
   document.title = "External Links – valflrt.dev";
@@ -8,12 +10,18 @@ const ExternalLinks = () => {
       <h1>External Links</h1>
       <ul>
         <li>
-          <a className={"link"} href={"https://gh.valflrt.dev"}>
+          <a
+            className={css.j("link", "underline")}
+            href={"https://gh.valflrt.dev"}
+          >
             Github account
           </a>
         </li>
         <li>
-          <CopyLink className={"link"} textToCopy={"valflrt#8436"}>
+          <CopyLink
+            className={css.j("link", "underline")}
+            textToCopy={"valflrt#8436"}
+          >
             Discord: valflrt#8436
           </CopyLink>
         </li>

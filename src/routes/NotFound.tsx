@@ -1,5 +1,6 @@
-import TimedRouterLink from "../particles/TimedRouterLink";
-import { TimedRouterLinkDefaultProps } from "../misc";
+import PageSwitchLink from "../specific/PageSwitchLink";
+
+import { css } from "../utils";
 
 import "./NotFound.scss";
 
@@ -10,13 +11,9 @@ const NotFound = () => {
     <>
       <h1 className={"fortyHundredAndFour"}>404</h1>
       <p>There's nothing here !</p>
-      <TimedRouterLink
-        className={() => "link"}
-        to={"/"}
-        {...TimedRouterLinkDefaultProps}
-      >
+      <PageSwitchLink to={"/"} className={() => css.j("link", "underlined")}>
         Back home
-      </TimedRouterLink>
+      </PageSwitchLink>
     </>
   );
 };

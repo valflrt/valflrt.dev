@@ -1,3 +1,7 @@
+import Link from "../common/Link";
+
+import { css } from "../utils";
+
 const Projects = () => {
   document.title = "Projects – valflrt.dev";
 
@@ -6,22 +10,28 @@ const Projects = () => {
       <h1>Some of my Projects</h1>
       <ul>
         <li>
-          <a className={"link"} href={"https://gh.valflrt.dev/lejardinier"}>
+          <Link
+            className={css.j("link", "underline")}
+            to={"https://gh.valflrt.dev/lejardinier"}
+          >
             Le Jardinier (discord bot)
-          </a>
+          </Link>
         </li>
         <li>
-          <a className={"link"} href={"https://gh.valflrt.dev/react-template"}>
+          <Link
+            className={css.j("link", "underline")}
+            to={"https://gh.valflrt.dev/react-template"}
+          >
             A React template
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            className={"link"}
-            href={"https://gh.valflrt.dev/encrypt-directory"}
+          <Link
+            className={css.j("link", "underline")}
+            to={"https://gh.valflrt.dev/encrypt-directory"}
           >
             A directory encrypting tool
-          </a>
+          </Link>
         </li>
       </ul>
     </>
