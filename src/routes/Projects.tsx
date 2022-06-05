@@ -13,6 +13,7 @@ const Projects = () => {
           <Link
             className={css.j("link", "underlined")}
             to={"https://gh.valflrt.dev/lejardinier"}
+            target={"_blank"}
           >
             Le Jardinier (discord bot)
           </Link>
@@ -20,17 +21,19 @@ const Projects = () => {
         <li>
           <Link
             className={css.j("link", "underlined")}
-            to={"https://gh.valflrt.dev/react-template"}
+            to={"https://gh.valflrt.dev/Fencryption"}
+            target={"_blank"}
           >
-            A React template
+            Fencryption (A directory encrypting tool)
           </Link>
         </li>
         <li>
           <Link
             className={css.j("link", "underlined")}
-            to={"https://gh.valflrt.dev/encrypt-directory"}
+            to={"https://gh.valflrt.dev/react-template"}
+            target={"_blank"}
           >
-            A directory encrypting tool
+            A React template
           </Link>
         </li>
       </ul>

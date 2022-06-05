@@ -1,3 +1,4 @@
+import Link from "../common/Link";
 import CopyLink from "../common/CopyLink";
 
 import { css } from "../utils";
@@ -10,12 +11,13 @@ const ExternalLinks = () => {
       <h1>External Links</h1>
       <ul>
         <li>
-          <a
+          <Link
             className={css.j("link", "underlined")}
-            href={"https://gh.valflrt.dev"}
+            to={"https://gh.valflrt.dev"}
+            target={"_blank"}
           >
             Github account
-          </a>
+          </Link>
         </li>
         <li>
           <CopyLink
