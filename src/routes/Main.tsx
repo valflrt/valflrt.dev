@@ -11,7 +11,7 @@ const Main = () => {
     let daysQ = divide(hoursQ[0], 24);
     let yearsQ = divide(daysQ[0], 365);
 
-    return `${yearsQ[0].toFixed()} years, ${yearsQ[1].toFixed()} days and ${daysQ[1].toFixed()} hours`;
+    return `${yearsQ[0].toFixed()} years and ${yearsQ[1].toFixed()} days`;
   };
 
   return (
