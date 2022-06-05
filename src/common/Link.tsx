@@ -3,12 +3,13 @@ import BaseLink from "./BaseLink";
 const Link: React.FC<
   Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
     to: string | URL;
+    target?: "_blank" | "_self";
   }
 > = (props) => {
-  let { to, ...filteredProps } = props;
+  let { to, target, ...filteredProps } = props;
 
   let toDo = () => {
-    window.location.assign(to);
+    window.open(to, target ?? "_self");
   };
 
   return <BaseLink toDo={toDo} {...filteredProps} />;
