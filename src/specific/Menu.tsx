@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronLeft } from "react-feather";
+import { Plus } from "react-feather";
 
 import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
 
@@ -10,11 +10,11 @@ import { css } from "../utils";
 import "./Menu.scss";
 
 const Menu = () => {
-  let [isMenuHidden, setIsMenuHidden] = useState(true);
+  let [isMenuVisible, setIsMenuVisible] = useState(false);
   let toggleRef = React.createRef<HTMLDivElement>();
 
   useClickOutsideEffect<HTMLDivElement>(
-    () => !isMenuHidden && setIsMenuHidden(true),
+    () => isMenuVisible && setIsMenuVisible(false),
     toggleRef
   );
 
@@ -23,12 +23,12 @@ const Menu = () => {
       <div className={"menuWrapper"}>
         <div
           ref={toggleRef}
-          className={css.j("toggle", isMenuHidden ? "rotated" : "")}
-          onClick={() => setIsMenuHidden((s) => !s)}
+          className={css.j("toggle", isMenuVisible ? "rotated" : "")}
+          onClick={() => setIsMenuVisible((s) => !s)}
         >
-          <ChevronLeft />
+          <Plus />
         </div>
-        <div className={css.j("menu", isMenuHidden ? "hidden" : "")}>
+        <div className={css.j("menu", isMenuVisible ? "visible" : "")}>
           <div className={"links"}>
             <PageSwitchLink to={"/"}>Main</PageSwitchLink>
             <PageSwitchLink to={"/projects"}>Projects</PageSwitchLink>

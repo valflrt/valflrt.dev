@@ -61,7 +61,7 @@
       }
 
       &.rotated > svg {
-        transform: rotate(-180deg);
+        transform: rotate(-135deg);
       }
     }
 
@@ -79,12 +79,15 @@
       align-items: flex-start;
       justify-content: flex-start;
 
+      transform: scale(0);
+      transform-origin: left;
+      opacity: 0;
+
       transition: 200ms;
 
-      &.hidden {
-        transform: scale(0);
-        transform-origin: left;
-        opacity: 0;
+      &.visible {
+        transform: scale(1);
+        opacity: 1;
       }
 
       .links {
