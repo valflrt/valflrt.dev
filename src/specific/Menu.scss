@@ -42,8 +42,6 @@
         width: 36px;
         height: 36px;
 
-        margin-right: 6px;
-
         border-radius: 18px;
         background-color: var(--primary-tone-2);
 
@@ -53,8 +51,8 @@
         align-items: center;
         justify-content: center;
 
-        &:last-child {
-          margin-right: 0;
+        &:not(:last-child) {
+          margin-right: 6px;
         }
 
         .tactile & {
@@ -69,7 +67,8 @@
 
           transform: rotate(45deg);
 
-          transition: 200ms;
+          transition-duration: 200ms;
+          transition-property: transform 200ms;
 
           .tactile & {
             width: 28px;
@@ -102,7 +101,8 @@
       transform-origin: left;
       opacity: 0;
 
-      transition: 200ms;
+      transition-duration: 200ms;
+      transition-property: transform, opacity;
 
       &.visible {
         transform: scale(1);
@@ -119,8 +119,11 @@
           width: 100%;
           padding: 4px 8px;
           border-radius: 6px;
-          transition: background-color 200ms;
+
           color: var(--text-tone);
+
+          transition-duration: 200ms;
+          transition-property: background-color;
 
           .tactile & {
             padding: 5px 10px;
