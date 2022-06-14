@@ -29,10 +29,23 @@ const Menu = () => {
             ref={menuToggleRef}
             className={css.j("button", isMenuVisible ? "rotated" : "")}
             onClick={() => setIsMenuVisible((os) => !os)}
+            title={
+              isMenuVisible
+                ? "Close this small panel below"
+                : "Is there something here ?"
+            }
           >
             <X />
           </div>
-          <div className="button" onClick={() => switchTheme()}>
+          <div
+            className="button"
+            onClick={() => switchTheme()}
+            title={
+              theme === "light"
+                ? "Too much light ? Try this !"
+                : "You can't see anything ? Click here !"
+            }
+          >
             {theme === "light" ? <Moon /> : <Sun />}
           </div>
         </div>
