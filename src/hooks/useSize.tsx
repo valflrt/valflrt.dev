@@ -9,7 +9,7 @@ export interface Size {
   outerHeight: number;
 }
 
-export let useSize = () => {
+let useSize = () => {
   let [size, setSize] = useState<Size>();
 
   let handleResize = () =>
@@ -24,3 +24,5 @@ export let useSize = () => {
 
   return size;
 };
+
+export default useSize;
