@@ -64,10 +64,10 @@ body {
     0 3px 3px rgba(36, 31, 61, 0.025);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Cabin&family=Lobster&family=Roboto+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Lobster&family=Roboto+Mono&display=swap");
 
 html {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 #root {
@@ -78,7 +78,7 @@ html {
 
   color: var(--monochrome-tone-095);
   background-color: var(--primary-tone-050);
-  font-family: "Cabin", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   overflow: hidden auto;
   scroll-behavior: smooth;
 }
