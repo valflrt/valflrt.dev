@@ -17,7 +17,7 @@
     height: 100%;
     width: 100%;
 
-    padding: 10px;
+    padding: 16px;
 
     display: flex;
     flex-flow: column nowrap;
@@ -29,12 +29,15 @@
     }
 
     .desktop & {
-      padding: 25px;
+      padding: 22px;
     }
 
     .toggle {
       width: 36px;
       height: 36px;
+
+      border-radius: 18px;
+      background-color: var(--primary-tone-045);
 
       align-self: flex-start;
       cursor: pointer;
@@ -46,6 +49,7 @@
       .tactile & {
         width: 40px;
         height: 40px;
+        border-radius: 20px;
       }
 
       & > svg {
@@ -67,6 +71,7 @@
 
     .menu {
       padding: 10px;
+      margin-top: 8px;
 
       background-color: var(--primary-tone-055);
       box-shadow: var(--default-box-shadow);
@@ -97,8 +102,9 @@
         justify-content: flex-start;
 
         .link {
+          width: 100%;
           padding: 4px 8px;
-          border-radius: 8px;
+          border-radius: 6px;
           transition: background-color 500ms;
           color: var(--monochrome-tone-095);
 
@@ -107,7 +113,7 @@
           }
 
           &.focused {
-            background-color: var(--primary-tone-040);
+            background-color: var(--primary-tone-045);
           }
 
           &:not(:last-child) {

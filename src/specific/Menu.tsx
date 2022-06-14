@@ -15,7 +15,7 @@ const Menu = () => {
 
   useClickOutsideEffect<HTMLDivElement>(
     () => isMenuVisible && setIsMenuVisible(false),
-    toggleRef
+    [toggleRef]
   );
 
   return (
