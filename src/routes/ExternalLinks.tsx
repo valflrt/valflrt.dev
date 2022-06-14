@@ -27,6 +27,14 @@ const ExternalLinks = () => {
             Discord: valflrt#8436
           </CopyLink>
         </li>
+        <li>
+          <CopyLink
+            className={css.j("link", "underlined")}
+            textToCopy={"val@valflrt.dev"}
+          >
+            Email: val@valflrt.dev
+          </CopyLink>
+        </li>
       </ul>
     </>
   );
