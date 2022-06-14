@@ -9,7 +9,7 @@ let useClickOutsideEffect = <refElementType extends HTMLElement>(
   let handleClickOutside = (e: MouseEvent) => {
     if (
       excludeRefs
-        .map((ref) => !!ref.current && !ref.current.contains(e.target as Node))
+        .map((ref) => !ref.current || !ref.current.contains(e.target as Node))
         .every((i) => !!i)
     )
       callback(e);
