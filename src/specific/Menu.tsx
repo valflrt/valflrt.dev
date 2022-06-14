@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Plus } from "react-feather";
+import { Moon, Sun, X } from "react-feather";
 
+import useTheme from "../hooks/useTheme";
 import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
 
 import PageSwitchLink from "./PageSwitchLink";
@@ -10,23 +11,30 @@ import { css } from "../utils";
 import "./Menu.scss";
 
 const Menu = () => {
+  let [theme, switchTheme] = useTheme();
+
   let [isMenuVisible, setIsMenuVisible] = useState(false);
-  let toggleRef = React.createRef<HTMLDivElement>();
+  let menuToggleRef = React.createRef<HTMLDivElement>();
 
   useClickOutsideEffect<HTMLDivElement>(
     () => isMenuVisible && setIsMenuVisible(false),
-    [toggleRef]
+    [menuToggleRef]
   );
 
   return (
     <div className={"menuWrapperWrapper"}>
       <div className={"menuWrapper"}>
-        <div
-          ref={toggleRef}
-          className={css.j("toggle", isMenuVisible ? "rotated" : "")}
-          onClick={() => setIsMenuVisible((s) => !s)}
-        >
-          <Plus />
+        <div className="buttons">
+          <div
+            ref={menuToggleRef}
+            className={css.j("button", isMenuVisible ? "rotated" : "")}
+            onClick={() => setIsMenuVisible((os) => !os)}
+          >
+            <X />
+          </div>
+          <div className="button" onClick={() => switchTheme()}>
+            {theme === "light" ? <Moon /> : <Sun />}
+          </div>
         </div>
         <div className={css.j("menu", isMenuVisible ? "visible" : "")}>
           <div className={"links"}>

@@ -12,16 +12,27 @@ body {
 }
 
 ::selection {
-  color: var(--primary-tone-090);
+  color: var(--text-tone);
   background: #30295180;
 }
 ::-moz-selection {
-  color: var(--primary-tone-090);
+  color: var(--text-tone);
   background: #30295180;
 }
 
 :root {
-  --primary-tone-010: #0c0a14;
+  --primary-tone-1: #53478f;
+  --primary-tone-2: #5f52a3;
+  --primary-tone-3: #6b5cb8;
+  --primary-tone-4: #8575d1;
+  --primary-tone-5: #9285d6;
+
+  --text-tone: #f1f0fa;
+
+  --default-box-shadow: 0 3px 10px rgba(36, 31, 61, 0.05),
+    0 3px 3px rgba(36, 31, 61, 0.025);
+
+  /* --primary-tone-010: #0c0a14;
   --primary-tone-015: #181429;
   --primary-tone-020: #241f3d;
   --primary-tone-025: #302952;
@@ -58,10 +69,35 @@ body {
   --monochrome-tone-080: #c9c7d1;
   --monochrome-tone-085: #d6d5dd;
   --monochrome-tone-090: #e4e3e8;
-  --monochrome-tone-095: #f1f1f4;
+  --monochrome-tone-095: #f1f1f4; */
+}
+
+[data-theme="dark"] {
+  --primary-tone-015: #181429;
+  --primary-tone-020: #241f3d;
+  --primary-tone-025: #302952;
+  --primary-tone-030: #3c3366;
+  --primary-tone-035: #473d7a;
+
+  --primary-tone-1: #181429;
+  --primary-tone-2: #241f3d;
+  --primary-tone-3: #302952;
+  --primary-tone-4: #3c3366;
+  --primary-tone-5: #473d7a;
+
+  --text-tone: #e4e3e8;
 
   --default-box-shadow: 0 3px 10px rgba(36, 31, 61, 0.05),
     0 3px 3px rgba(36, 31, 61, 0.025);
+
+  ::selection {
+    color: var(--text-tone);
+    background: #9285d680;
+  }
+  ::-moz-selection {
+    color: var(--text-tone);
+    background: #9285d680;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Lobster&family=Roboto+Mono&display=swap");
@@ -76,11 +112,15 @@ html {
 
   padding: 10px;
 
-  color: var(--monochrome-tone-095);
-  background-color: var(--primary-tone-050);
+  color: var(--text-tone);
+  background-color: var(--primary-tone-3);
+
   font-family: "Montserrat", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
   overflow: hidden auto;
   scroll-behavior: smooth;
+
+  transition: background-color 100ms;
 }
 
 h1,
@@ -98,7 +138,7 @@ a {
 code {
   padding: 2px 4px;
   border-radius: 4px;
-  background-color: var(--primary-tone-045);
+  background-color: var(--primary-tone-2);
   font-family: "Roboto Mono";
   font-size: 13.5px;
 }
@@ -119,7 +159,7 @@ code {
 
 .toast {
   color: inherit !important;
-  background-color: var(--primary-tone-055) !important;
+  background-color: var(--primary-tone-4) !important;
   box-shadow: var(--default-box-shadow);
   border-radius: 8px;
   font: inherit;

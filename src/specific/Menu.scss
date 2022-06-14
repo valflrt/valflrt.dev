@@ -32,40 +32,54 @@
       padding: 22px;
     }
 
-    .toggle {
-      width: 36px;
-      height: 36px;
-
-      border-radius: 18px;
-      background-color: var(--primary-tone-045);
-
-      align-self: flex-start;
-      cursor: pointer;
-
+    div.buttons {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+      justify-content: start;
 
-      .tactile & {
-        width: 40px;
-        height: 40px;
-        border-radius: 20px;
-      }
+      .button {
+        width: 36px;
+        height: 36px;
 
-      & > svg {
-        width: 24px;
-        height: 24px;
+        margin-right: 6px;
 
-        transition: 200ms;
+        border-radius: 18px;
+        background-color: var(--primary-tone-2);
+
+        cursor: pointer;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:last-child {
+          margin-right: 0;
+        }
 
         .tactile & {
-          width: 28px;
-          height: 28px;
+          width: 40px;
+          height: 40px;
+          border-radius: 20px;
         }
-      }
 
-      &.rotated > svg {
-        transform: rotate(-135deg);
+        & > svg {
+          width: 24px;
+          height: 24px;
+
+          transform: rotate(45deg);
+
+          transition: 200ms;
+
+          .tactile & {
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        &.rotated > svg {
+          transform: rotate(-90deg);
+        }
       }
     }
 
@@ -73,7 +87,7 @@
       padding: 10px;
       margin-top: 8px;
 
-      background-color: var(--primary-tone-055);
+      background-color: var(--primary-tone-4);
       box-shadow: var(--default-box-shadow);
       border-radius: 8px;
 
@@ -105,15 +119,15 @@
           width: 100%;
           padding: 4px 8px;
           border-radius: 6px;
-          transition: background-color 500ms;
-          color: var(--monochrome-tone-095);
+          transition: background-color 200ms;
+          color: var(--text-tone);
 
           .tactile & {
             padding: 5px 10px;
           }
 
           &.focused {
-            background-color: var(--primary-tone-045);
+            background-color: var(--primary-tone-2);
           }
 
           &:not(:last-child) {
