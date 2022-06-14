@@ -68,7 +68,7 @@
           transform: rotate(45deg);
 
           transition-duration: 200ms;
-          transition-property: transform 200ms;
+          transition-property: transform;
 
           .tactile & {
             width: 28px;
