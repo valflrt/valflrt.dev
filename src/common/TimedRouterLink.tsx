@@ -9,7 +9,7 @@ export type TimedRouterLinkProps = Omit<
 > & {
   to: string;
   timeout?: number;
-  onTimeoutStart?: (ref: React.RefObject<HTMLSpanElement>) => any;
+  onTimeoutStart?: () => any;
   onTimeoutEnd?: () => any;
   className?: (isFocused: boolean) => string;
 };
@@ -28,10 +28,8 @@ const TimedRouterLink: React.FC<TimedRouterLinkProps> = (props) => {
   let navigate = useNavigate();
   let isFocused = !!useMatch({ path: to, end: true });
 
-  let ref = React.createRef<HTMLSpanElement>();
-
   let toAwait = (r: () => void) => {
-    if (onTimeoutStart) onTimeoutStart(ref);
+    if (onTimeoutStart) onTimeoutStart();
     setTimeout(r, timeout ?? 1e3); // waits for custom timeout if specified or for 1s
   };
 
@@ -45,7 +43,6 @@ const TimedRouterLink: React.FC<TimedRouterLinkProps> = (props) => {
     <BaseLink
       toDo={handleClick}
       toAwait={toAwait}
-      ref={ref}
       className={className ? className(isFocused) : undefined}
       {...filteredProps}
     />
