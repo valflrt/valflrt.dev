@@ -9,8 +9,8 @@ const Main = () => {
     <>
       <h1>Heya ! I'm valflrt !</h1>
       <p>
-        I am a coding enthusiast, my real name is Valentin Fleurit. I was born
-        at{" "}
+        I am a programming enthusiast, my real name is Valentin Fleurit. I was
+        born at{" "}
         <CopyLink
           className={"link"}
           textToCopy={"1108087200"}
