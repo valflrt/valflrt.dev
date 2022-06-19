@@ -3,13 +3,16 @@ import toast from "react-hot-toast";
 
 import BaseLink from "./BaseLink";
 
+export type CopyLinkProps = Omit<
+  React.HTMLProps<HTMLSpanElement>,
+  "onClick"
+> & {
+  textToCopy: string;
+  notificationTimeout?: number;
+};
+
 // Used to create a link that copies some text to clipboard
-const CopyLink: React.FC<
-  Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
-    textToCopy: string;
-    notificationTimeout?: number;
-  }
-> = (props) => {
+const CopyLink: React.FC<CopyLinkProps> = (props) => {
   let { textToCopy, notificationTimeout, ...filteredProps } = props;
 
   let toDo = () => {

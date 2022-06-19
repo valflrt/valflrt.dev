@@ -1,11 +1,14 @@
 import React from "react";
 
-const BaseLink: React.FC<
-  Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
-    toDo: () => any;
-    toAwait?: (resolve: (value?: unknown) => void) => void;
-  }
-> = (props) => {
+export type BaseLinkProps = Omit<
+  React.HTMLProps<HTMLSpanElement>,
+  "onClick"
+> & {
+  toDo: () => any;
+  toAwait?: (resolve: (value?: unknown) => void) => void;
+};
+
+const BaseLink: React.FC<BaseLinkProps> = (props) => {
   let { toDo, toAwait, ...filteredProps } = props;
 
   let handleClick: React.MouseEventHandler<HTMLSpanElement> = async (e) => {
