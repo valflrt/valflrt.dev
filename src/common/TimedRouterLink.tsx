@@ -29,6 +29,7 @@ const TimedRouterLink: React.FC<TimedRouterLinkProps> = (props) => {
   let isFocused = !!useMatch({ path: to, end: true });
 
   let toAwait = (r: () => void) => {
+    if (isFocused) return;
     if (onTimeoutStart) onTimeoutStart();
     setTimeout(r, timeout ?? 1e3); // waits for custom timeout if specified or for 1s
   };
