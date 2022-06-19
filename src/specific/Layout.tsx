@@ -15,7 +15,7 @@ const Layout: React.FC = ({ children }) => (
     className={css.j(
       "layout",
       useIsMobile() ? "mobile" : "desktop",
-      useIsTactile() ? "tactile" : ""
+      useIsTactile() ? "tactile" : "notTactile"
     )}
   >
     <Toaster position={"top-right"} toastOptions={{ className: "toast" }} />
