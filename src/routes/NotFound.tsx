@@ -1,7 +1,5 @@
 import PageSwitchLink from "../specific/PageSwitchLink";
 
-import { css } from "../utils";
-
 import "./NotFound.scss";
 
 const NotFound = () => {
@@ -11,7 +9,7 @@ const NotFound = () => {
     <>
       <h1 className={"fortyHundredAndFour"}>404</h1>
       <p>There's nothing here !</p>
-      <PageSwitchLink to={"/"} className={() => css.j("link", "underlined")}>
+      <PageSwitchLink to={"/"} className={() => "link underlined"}>
         Back home
       </PageSwitchLink>
     </>
