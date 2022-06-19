@@ -9,7 +9,7 @@ const NotFound = React.lazy(() => import("./NotFound"));
 import "./Routes.scss";
 
 const Routes = () => (
-  <div className={"main"}>
+  <>
     <React.Suspense fallback={null}>
       <RouteGroup>
         <Route path={"/"} element={<Main />} />
@@ -18,7 +18,7 @@ const Routes = () => (
         <Route path={"*"} element={<NotFound />} />
       </RouteGroup>
     </React.Suspense>
-  </div>
+  </>
 );
 
 export default Routes;

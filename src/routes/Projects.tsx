@@ -9,7 +9,7 @@ const Projects = () => {
   document.title = "Projects – valflrt.dev";
 
   return (
-    <>
+    <div className={"main projects"}>
       <h1>Some of my Projects</h1>
       <div className="list">
         {projects.map((p, i) => (
@@ -31,7 +31,7 @@ const Projects = () => {
           </div>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

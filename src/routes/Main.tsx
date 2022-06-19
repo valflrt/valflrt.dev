@@ -6,7 +6,7 @@ const Main = () => {
   let elapsedDays = (Date.now() / 1000 - 1108087200) / 60 / 60 / 24;
 
   return (
-    <>
+    <div className={"main"}>
       <h1>Heya ! I'm valflrt !</h1>
       <p>
         I am a programming enthusiast, my real name is Valentin Fleurit. I was
@@ -23,7 +23,7 @@ const Main = () => {
         (Unix Epoch). I'm French and proud to be (oui oui baguette) and I like
         typescript.
       </p>
-    </>
+    </div>
   );
 };
 

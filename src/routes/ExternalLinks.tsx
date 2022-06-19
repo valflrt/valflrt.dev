@@ -31,7 +31,7 @@ const ExternalLinks = () => {
   document.title = "External Links – valflrt.dev";
 
   return (
-    <>
+    <div className={"main externalLinks"}>
       <h1>External Links</h1>
       <div className="links">
         <Link
@@ -48,7 +48,7 @@ const ExternalLinks = () => {
           <AtSign /> Email
         </CopyLink>
       </div>
-    </>
+    </div>
   );
 };
 
