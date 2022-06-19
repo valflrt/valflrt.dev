@@ -38,6 +38,8 @@
       align-items: flex-start;
       justify-content: start;
 
+      z-index: 20;
+
       .button {
         width: 36px;
         height: 36px;
@@ -83,47 +85,57 @@
     }
 
     .menu {
-      padding: 10px;
-      margin-top: 8px;
+      position: fixed;
+      top: 0;
+      left: 0;
+
+      height: 100%;
+      width: 100%;
 
       background-color: var(--primary-tone-4);
       box-shadow: var(--default-box-shadow);
-      border-radius: 8px;
 
       user-select: none;
 
       display: flex;
       flex-flow: column;
-      align-items: flex-start;
-      justify-content: flex-start;
+      align-items: center;
+      justify-content: center;
 
-      transform: scale(0);
+      transform: scaleX(0);
       transform-origin: left;
       opacity: 0;
+      pointer-events: none;
 
       transition-duration: 200ms;
       transition-property: transform, opacity;
 
+      .desktop & {
+        height: 100%;
+        width: 400px;
+      }
+
       &.visible {
         transform: scale(1);
         opacity: 1;
+        pointer-events: all;
       }
 
       .links {
         display: flex;
         flex-flow: column;
-        align-items: flex-start;
-        justify-content: flex-start;
+        align-items: center;
+        justify-content: center;
 
         .link {
-          width: 100%;
-          padding: 4px 8px;
-          border-radius: 6px;
+          padding: 8px 16px;
+          border-radius: 8px;
 
           color: var(--text-tone);
 
-          transition-duration: 200ms;
-          transition-property: background-color;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           .tactile & {
             padding: 5px 10px;

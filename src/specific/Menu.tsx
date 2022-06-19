@@ -9,22 +9,24 @@ import PageSwitchLink from "./PageSwitchLink";
 import { css } from "../utils";
 
 import "./Menu.scss";
+import RouterLink from "../common/RouterLink";
 
 const Menu = () => {
   let [theme, switchTheme] = useTheme();
 
   let [isMenuVisible, setIsMenuVisible] = useState(false);
   let menuToggleRef = React.createRef<HTMLDivElement>();
+  let buttonsRef = React.createRef<HTMLDivElement>();
 
   useClickOutsideEffect<HTMLDivElement>(
     () => isMenuVisible && setIsMenuVisible(false),
-    [menuToggleRef]
+    [menuToggleRef, buttonsRef]
   );
 
   return (
     <div className={"menuWrapperWrapper"}>
       <div className={"menuWrapper"}>
-        <div className="buttons">
+        <div className="buttons" ref={buttonsRef}>
           <div
             ref={menuToggleRef}
             className={css.j("button", isMenuVisible ? "rotated" : "")}
@@ -51,9 +53,28 @@ const Menu = () => {
         </div>
         <div className={css.j("menu", isMenuVisible ? "visible" : "")}>
           <div className={"links"}>
-            <PageSwitchLink to={"/"}>Main</PageSwitchLink>
-            <PageSwitchLink to={"/projects"}>Projects</PageSwitchLink>
-            <PageSwitchLink to={"/external-links"}>
+            <PageSwitchLink
+              className={(isFocused) =>
+                css.j("link", isFocused ? "focused" : "")
+              }
+              to={"/"}
+            >
+              Main
+            </PageSwitchLink>
+            <PageSwitchLink
+              className={(isFocused) =>
+                css.j("link", isFocused ? "focused" : "")
+              }
+              to={"/projects"}
+            >
+              Projects
+            </PageSwitchLink>
+            <PageSwitchLink
+              className={(isFocused) =>
+                css.j("link", isFocused ? "focused" : "")
+              }
+              to={"/external-links"}
+            >
               External Links
             </PageSwitchLink>
           </div>
