@@ -15,7 +15,7 @@ let useClickOutsideEffect = <refElementType extends HTMLElement>(
       callback(e);
   };
 
-  useWindowEvent("click", handleClickOutside);
+  useWindowEvent("mouseup", handleClickOutside);
 };
 
 export default useClickOutsideEffect;
