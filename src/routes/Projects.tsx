@@ -1,7 +1,7 @@
+import { ArrowRight } from "react-feather";
+
 import projects from "../assets/projects";
 import Link from "../common/Link";
-
-import { css } from "../utils";
 
 import "./Projects.scss";
 
@@ -25,7 +25,10 @@ const Projects = () => {
           target={"_blank"}
           className={"link item"}
         >
-          <div className={"more underlined"}>See more on github...</div>
+          <div className={"more underlined"}>
+            See more on github
+            <ArrowRight />
+          </div>
         </Link>
       </div>
     </>

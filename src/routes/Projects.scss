@@ -59,6 +59,10 @@
           box-shadow: var(--default-box-shadow);
           transform: scale(102%);
         }
+
+        svg {
+          margin-left: 12px;
+        }
       }
     }
   }
