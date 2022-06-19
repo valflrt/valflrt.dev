@@ -125,11 +125,12 @@
         display: flex;
         flex-flow: column;
         align-items: center;
-        justify-content: center;
+        gap: 4px;
 
         .link {
-          padding: 8px 16px;
-          border-radius: 8px;
+          width: 100%;
+          height: 40px;
+          padding: 4px;
 
           color: var(--text-tone);
 
@@ -137,16 +138,23 @@
           align-items: center;
           justify-content: center;
 
-          .tactile & {
-            padding: 5px 10px;
-          }
-
           &.focused {
-            background-color: var(--primary-tone-2);
-          }
+            align-items: baseline;
 
-          &:not(:last-child) {
-            margin-bottom: 4px;
+            &::before,
+            &::after {
+              margin: 0 6px;
+              color: var(--primary-tone-1);
+              font-size: 20px;
+              font-weight: 600;
+            }
+
+            &::before {
+              content: "[";
+            }
+            &::after {
+              content: "]";
+            }
           }
         }
       }

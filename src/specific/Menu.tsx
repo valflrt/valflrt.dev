@@ -9,7 +9,6 @@ import PageSwitchLink from "./PageSwitchLink";
 import { css } from "../utils";
 
 import "./Menu.scss";
-import RouterLink from "../common/RouterLink";
 
 const Menu = () => {
   let [theme, switchTheme] = useTheme();
