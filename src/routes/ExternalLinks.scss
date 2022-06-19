@@ -12,7 +12,7 @@
     gap: 8px;
 
     .link {
-      padding: 8px 16px;
+      padding: 12px 16px;
 
       flex-grow: 1 1 160px;
 
@@ -26,6 +26,11 @@
       align-items: center;
       justify-content: center;
       gap: 16px;
+
+      .notTactile &:hover {
+        box-shadow: var(--default-box-shadow);
+        transform: scale(102%);
+      }
     }
   }
 }
