@@ -1,18 +1,11 @@
-import BaseLink from "./BaseLink";
-
 const Link: React.FC<
-  Omit<React.HTMLProps<HTMLSpanElement>, "onClick"> & {
-    to: string | URL;
-    target?: "_blank" | "_self";
+  Omit<React.HTMLProps<HTMLAnchorElement>, "onClick"> & {
+    to: string;
   }
 > = (props) => {
-  let { to, target, ...filteredProps } = props;
+  let { to, ...filteredProps } = props;
 
-  let toDo = () => {
-    window.open(to, target ?? "_self");
-  };
-
-  return <BaseLink toDo={toDo} {...filteredProps} />;
+  return <a href={to} {...filteredProps}></a>;
 };
 
 export default Link;
