@@ -23,8 +23,12 @@ const Routes = () => {
 
   return (
     <RouteGroup>
-      {routes.map((r) => (
-        <Route path={r.path} element={<Lazy importPromise={r.source} />} />
+      {routes.map((r, i) => (
+        <Route
+          path={r.path}
+          key={i}
+          element={<Lazy importPromise={r.source} />}
+        />
       ))}
     </RouteGroup>
   );
