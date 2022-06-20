@@ -3,5 +3,9 @@
     width: 128px;
     height: auto;
     margin-bottom: 12px;
+
+    [data-theme="dark"] & {
+      filter: saturate(80%) brightness(80%);
+    }
   }
 }
