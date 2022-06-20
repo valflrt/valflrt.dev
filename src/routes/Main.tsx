@@ -2,6 +2,8 @@ import CopyLink from "../common/CopyLink";
 
 import logo from "../../public/assets/logo-128.png";
 
+import "./Main.scss";
+
 const Main = () => {
   document.title = "Home – valflrt.dev";
 
@@ -9,7 +11,7 @@ const Main = () => {
 
   return (
     <div className={"main"}>
-      <img src={logo} alt="valflrt's logo" />
+      <img className={"logo"} src={logo} alt="valflrt's logo" />
       <h1>Heya ! I'm valflrt !</h1>
       <p className={"paragraph"}>
         I am a programming enthusiast, my real name is Valentin Fleurit. I was
