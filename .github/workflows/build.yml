@@ -18,8 +18,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Install (npm)
-        run: npm i
+      - name: Install (npm ci)
+        run: npm ci
 
       - name: Build
         run: npm run build
