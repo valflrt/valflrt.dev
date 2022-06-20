@@ -22,6 +22,21 @@ const Menu = () => {
     [menuToggleRef, buttonsRef]
   );
 
+  let links = [
+    {
+      name: "Main",
+      link: "/",
+    },
+    {
+      name: "Projects",
+      link: "/projects",
+    },
+    {
+      name: "External Links",
+      link: "/external-links",
+    },
+  ];
+
   return (
     <div className={"menuWrapperWrapper"}>
       <div className={"menuWrapper"}>
@@ -52,30 +67,17 @@ const Menu = () => {
         </div>
         <div className={css.j("menu", isMenuVisible ? "visible" : "")}>
           <div className={"links"}>
-            <PageSwitchLink
-              className={(isFocused) =>
-                css.j("link", isFocused ? "focused" : "")
-              }
-              to={"/"}
-            >
-              Main
-            </PageSwitchLink>
-            <PageSwitchLink
-              className={(isFocused) =>
-                css.j("link", isFocused ? "focused" : "")
-              }
-              to={"/projects"}
-            >
-              Projects
-            </PageSwitchLink>
-            <PageSwitchLink
-              className={(isFocused) =>
-                css.j("link", isFocused ? "focused" : "")
-              }
-              to={"/external-links"}
-            >
-              External Links
-            </PageSwitchLink>
+            {links.map((l, i) => (
+              <PageSwitchLink
+                to={l.link}
+                key={i}
+                className={(isFocused) =>
+                  css.j("link", isFocused ? "focused" : "")
+                }
+              >
+                {l.name}
+              </PageSwitchLink>
+            ))}
           </div>
         </div>
       </div>
