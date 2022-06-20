@@ -173,10 +173,15 @@ code {
 }
 
 button {
-  margin: inherit;
-  padding: inherit;
+  margin: 0;
+  padding: 0;
   color: inherit;
   font: inherit;
   background: inherit;
   border: inherit;
+}
+
+p.paragraph {
+  text-align: justify;
+  line-height: 24px;
 }
