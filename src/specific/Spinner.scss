@@ -11,6 +11,7 @@
   justify-content: center;
 
   transition-duration: 200ms;
+  transition-delay: 200ms;
   transition-property: transform;
 
   transform: translateX(100px);
@@ -19,17 +20,37 @@
     transform: translateX(0);
   }
 
-  & > span {
-    width: 12px;
-    height: 12px;
+  & > svg {
+    width: 16px;
+    height: 16px;
 
-    border: solid 2px var(--text-tone);
-    border-right-color: transparent;
-    border-radius: 8px;
+    transform-origin: center center;
+    animation: spinnerSpin 2s linear infinite;
 
-    animation: loader 0.75s infinite linear;
+    circle {
+      stroke-linecap: square;
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
 
-    @keyframes loader {
+      animation: spinnerDash 1.5s ease-in-out infinite;
+
+      @keyframes spinnerDash {
+        0% {
+          stroke-dasharray: 1, 200;
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -35px;
+        }
+        100% {
+          stroke-dasharray: 89, 200;
+          stroke-dashoffset: -120px;
+        }
+      }
+    }
+
+    @keyframes spinnerSpin {
       100% {
         transform: rotate(360deg);
       }
