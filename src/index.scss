@@ -11,6 +11,10 @@ body {
   -webkit-tap-highlight-color: #30295140;
 }
 
+/* *:focus {
+  outline: solid var(--primary-tone-1);
+} */
+
 ::selection {
   color: var(--text-tone);
   background: #30295180;
@@ -166,4 +170,13 @@ code {
   border-radius: 8px;
   font: inherit;
   cursor: default;
+}
+
+button {
+  margin: inherit;
+  padding: inherit;
+  color: inherit;
+  font: inherit;
+  background: inherit;
+  border: inherit;
 }

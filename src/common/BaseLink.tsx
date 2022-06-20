@@ -1,7 +1,7 @@
 import React from "react";
 
 export type BaseLinkProps = Omit<
-  React.HTMLProps<HTMLSpanElement>,
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
   "onClick"
 > & {
   toDo: () => any;
@@ -11,13 +11,13 @@ export type BaseLinkProps = Omit<
 const BaseLink: React.FC<BaseLinkProps> = (props) => {
   let { toDo, toAwait, ...filteredProps } = props;
 
-  let handleClick: React.MouseEventHandler<HTMLSpanElement> = async (e) => {
+  let handleClick: React.MouseEventHandler<HTMLButtonElement> = async (e) => {
     e.preventDefault();
     if (props.toAwait) await new Promise(props.toAwait);
     toDo();
   };
 
-  return <span onClick={handleClick} {...filteredProps} />;
+  return <button onClick={handleClick} {...filteredProps} />;
 };
 
 export default BaseLink;

@@ -1,11 +1,11 @@
 import React from "react";
 import { LinkProps, useMatch, useNavigate } from "react-router-dom";
 
-import BaseLink from "./BaseLink";
+import BaseLink, { BaseLinkProps } from "./BaseLink";
 
 export type TimedRouterLinkProps = Omit<
-  LinkProps,
-  "onClick" | "to" | "className"
+  BaseLinkProps,
+  "onClick" | "to" | "className" | "toDo"
 > & {
   to: string;
   timeout?: number;

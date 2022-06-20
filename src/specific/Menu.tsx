@@ -14,10 +14,10 @@ const Menu = () => {
   let [theme, switchTheme] = useTheme();
 
   let [isMenuVisible, setIsMenuVisible] = useState(false);
-  let menuToggleRef = React.createRef<HTMLDivElement>();
+  let menuToggleRef = React.createRef<HTMLButtonElement>();
   let buttonsRef = React.createRef<HTMLDivElement>();
 
-  useClickOutsideEffect<HTMLDivElement>(
+  useClickOutsideEffect<HTMLDivElement | HTMLButtonElement>(
     () => isMenuVisible && setIsMenuVisible(false),
     [menuToggleRef, buttonsRef]
   );
@@ -26,7 +26,7 @@ const Menu = () => {
     <div className={"menuWrapperWrapper"}>
       <div className={"menuWrapper"}>
         <div className="buttons" ref={buttonsRef}>
-          <div
+          <button
             ref={menuToggleRef}
             className={css.j("button", isMenuVisible ? "rotated" : "")}
             onClick={() => setIsMenuVisible((os) => !os)}
@@ -37,8 +37,8 @@ const Menu = () => {
             }
           >
             <X />
-          </div>
-          <div
+          </button>
+          <button
             className="button"
             onClick={() => switchTheme()}
             title={
@@ -48,7 +48,7 @@ const Menu = () => {
             }
           >
             {theme === "light" ? <Moon /> : <Sun />}
-          </div>
+          </button>
         </div>
         <div className={css.j("menu", isMenuVisible ? "visible" : "")}>
           <div className={"links"}>

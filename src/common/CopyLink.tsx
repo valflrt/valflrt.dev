@@ -1,12 +1,9 @@
 import React from "react";
 import toast from "react-hot-toast";
 
-import BaseLink from "./BaseLink";
+import BaseLink, { BaseLinkProps } from "./BaseLink";
 
-export type CopyLinkProps = Omit<
-  React.HTMLProps<HTMLSpanElement>,
-  "onClick"
-> & {
+export type CopyLinkProps = Omit<BaseLinkProps, "onClick" | "toDo"> & {
   textToCopy: string;
   notificationTimeout?: number;
 };
