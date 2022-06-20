@@ -1,24 +1,33 @@
-import React from "react";
 import { Route, Routes as RouteGroup } from "react-router-dom";
 
-const Main = React.lazy(() => import("./Main"));
-const Projects = React.lazy(() => import("./Projects"));
-const ExternalLinks = React.lazy(() => import("./ExternalLinks"));
-const NotFound = React.lazy(() => import("./NotFound"));
+import LazyFactory from "../factories/LazyFactory";
+
+import useSpinner from "../hooks/useSpinner";
 
 import "./Routes.scss";
 
-const Routes = () => (
-  <>
-    <React.Suspense fallback={null}>
-      <RouteGroup>
-        <Route path={"/"} element={<Main />} />
-        <Route path={"/projects"} element={<Projects />} />
-        <Route path={"/external-links"} element={<ExternalLinks />} />
-        <Route path={"*"} element={<NotFound />} />
-      </RouteGroup>
-    </React.Suspense>
-  </>
-);
+let routes = [
+  { path: "/", source: () => import("./Main") },
+  { path: "/projects", source: () => import("./Projects") },
+  { path: "/external-links", source: () => import("./ExternalLinks") },
+  { path: "*", source: () => import("./NotFound") },
+];
+
+const Routes = () => {
+  let setSpinnerState = useSpinner();
+
+  let Lazy = LazyFactory({
+    loadStart: () => setSpinnerState("visible"),
+    loadEnd: () => setSpinnerState("hidden"),
+  });
+
+  return (
+    <RouteGroup>
+      {routes.map((r) => (
+        <Route path={r.path} element={<Lazy importPromise={r.source} />} />
+      ))}
+    </RouteGroup>
+  );
+};
 
 export default Routes;
