@@ -2,8 +2,6 @@ import CopyLink from "../common/CopyLink";
 
 import logo from "../../public/assets/logo-128.png";
 
-import "./Main.scss";
-
 const Main = () => {
   document.title = "Home – valflrt.dev";
 
