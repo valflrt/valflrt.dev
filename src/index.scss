@@ -162,7 +162,7 @@ code {
 .toast {
   color: inherit !important;
   background-color: var(--primary-tone-4) !important;
-  box-shadow: var(--default-box-shadow);
+  box-shadow: var(--default-box-shadow) !important;
   border-radius: 8px;
   font: inherit;
   cursor: default;
