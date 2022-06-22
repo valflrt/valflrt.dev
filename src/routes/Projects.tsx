@@ -1,7 +1,31 @@
 import { ArrowRight } from "react-feather";
 
-import projects from "../assets/projects";
 import Link from "../common/Link";
+
+let projects = [
+  {
+    name: "Fencryption",
+    description: "A simple cli program to encrypt/decrypt a file/directory",
+    link: "https://github.com/valflrt/Fencryption",
+  },
+  {
+    name: "Le Jardinier",
+    description:
+      "Simple utility discord bot made using typescript and discord.js",
+    link: "https://github.com/valflrt/lejardinier",
+  },
+  {
+    name: "react-template",
+    description:
+      "A simple react typescript template with webpack. Routing and css-modules implemented.",
+    link: "https://github.com/valflrt/react-template",
+  },
+  {
+    name: "This website (valflrt.dev)",
+    description: "My website, made from my react-template.",
+    link: "https://github.com/valflrt/valflrt.dev",
+  },
+];
 
 import "./Projects.scss";
 
@@ -21,7 +45,7 @@ const Projects = () => {
           </Link>
         ))}
         <Link
-          to={"https://gh.valflrt.dev?tab=repositories"}
+          to={"https://github.com/valflrt?tab=repositories"}
           target={"_blank"}
           className={"link item"}
         >
