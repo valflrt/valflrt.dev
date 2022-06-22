@@ -10,7 +10,7 @@ const Main = () => {
   let elapsedDays = (Date.now() / 1000 - 1108087200) / 60 / 60 / 24;
 
   return (
-    <div className={"main"}>
+    <div className={"main home"}>
       <img className={"logo"} src={logo} alt="valflrt's logo" />
       <h1>Heya ! I'm valflrt !</h1>
       <p className={"paragraph"}>

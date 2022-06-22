@@ -1,4 +1,8 @@
-.main {
+.main.home {
+  .mobile & {
+    padding: 58px 16px;
+  }
+
   img.logo {
     width: 128px;
     height: auto;

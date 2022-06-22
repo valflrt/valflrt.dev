@@ -1,6 +1,6 @@
 .main {
   max-width: 400px;
-  padding: 40px 16px;
+  padding: 50px 16px;
   margin: auto;
 
   cursor: default;
@@ -43,7 +43,7 @@
   }
 
   .mobile & {
-    padding: 48px 16px;
+    padding: 58px 12px;
   }
 
   @keyframes spawn {
