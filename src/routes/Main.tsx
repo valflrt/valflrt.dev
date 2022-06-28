@@ -26,7 +26,7 @@ const Main = () => {
           <code>1108087200</code>
         </CopyLink>{" "}
         (Unix Epoch). I'm French and proud to be (oui oui baguette) and I like
-        typescript.
+        typescript. I fight for all file systems to be lowercase.
       </p>
     </div>
   );
