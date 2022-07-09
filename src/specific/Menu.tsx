@@ -60,7 +60,7 @@ const Menu = () => {
                 className={(isFocused) =>
                   css.j("link", isFocused ? "focused" : "")
                 }
-                tabIndex={isMenuVisible ? 0 : -1}
+                tabIndex={!isMenuVisible ? -1 : undefined}
               >
                 {l.name}
               </PageSwitchLink>
