@@ -21,9 +21,9 @@ const Layout: React.FC = ({ children }) => (
     )}
   >
     <Toaster position={"top-right"} toastOptions={{ className: "toast" }} />
-    {children}
     <Menu />
     <Spinner />
+    {children}
   </div>
 );
 
