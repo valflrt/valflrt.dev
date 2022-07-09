@@ -11,7 +11,7 @@ let useTheme = () => {
   }, [theme]);
 
   let switchTheme = () => {
-    setTheme((os) => (os === "light" ? "dark" : "light"));
+    setTheme((old) => (old === "light" ? "dark" : "light"));
   };
 
   return [theme, switchTheme] as ["light" | "dark", () => void];
