@@ -1,5 +1,5 @@
 import React from "react";
-import { LinkProps, useMatch, useNavigate } from "react-router-dom";
+import { useMatch, useNavigate } from "react-router-dom";
 
 import BaseLink, { BaseLinkProps } from "./BaseLink";
 

@@ -1,3 +1,5 @@
+import React from "react";
+
 export type LinkProps = Omit<React.HTMLProps<HTMLAnchorElement>, "onClick"> & {
   to: string;
 };
