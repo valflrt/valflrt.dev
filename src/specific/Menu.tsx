@@ -1,18 +1,15 @@
 import React, { useState } from "react";
-import { Moon, Sun, X } from "react-feather";
+import { X } from "react-feather";
 
-import useTheme from "../hooks/useTheme";
 import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
 
-import PageSwitchLink from "./PageSwitchLink";
+import PageSwitchLink from "../common/PageSwitchLink";
 
 import { css } from "../utils";
 
 import "./Menu.scss";
 
 const Menu = () => {
-  let [theme, switchTheme] = useTheme();
-
   let [isMenuVisible, setIsMenuVisible] = useState(false);
   let menuToggleRef = React.createRef<HTMLButtonElement>();
   let buttonsRef = React.createRef<HTMLDivElement>();
@@ -47,22 +44,11 @@ const Menu = () => {
             onClick={() => setIsMenuVisible((os) => !os)}
             title={
               isMenuVisible
-                ? "Close this small panel below"
+                ? "Close the menu panel"
                 : "Is there something here ?"
             }
           >
             <X />
-          </button>
-          <button
-            className="button"
-            onClick={() => switchTheme()}
-            title={
-              theme === "light"
-                ? "Too much light ? Try this !"
-                : "You can't see anything ? Click here !"
-            }
-          >
-            {theme === "light" ? <Moon /> : <Sun />}
           </button>
         </div>
         <div className={css.j("menu", isMenuVisible ? "visible" : "")}>
@@ -74,6 +60,7 @@ const Menu = () => {
                 className={(isFocused) =>
                   css.j("link", isFocused ? "focused" : "")
                 }
+                tabIndex={isMenuVisible ? 0 : -1}
               >
                 {l.name}
               </PageSwitchLink>

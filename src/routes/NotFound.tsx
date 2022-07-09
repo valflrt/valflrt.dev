@@ -1,4 +1,4 @@
-import PageSwitchLink from "../specific/PageSwitchLink";
+import PageSwitchLink from "../common/PageSwitchLink";
 
 import "./NotFound.scss";
 

@@ -11,9 +11,9 @@ body {
   -webkit-tap-highlight-color: #30295140;
 }
 
-/* *:focus {
-  outline: solid var(--primary-tone-1);
-} */
+*:focus-visible {
+  outline: 3px solid var(--primary-tone-1);
+}
 
 ::selection {
   color: var(--text-tone);
@@ -76,7 +76,7 @@ body {
   --monochrome-tone-095: #f1f1f4; */
 }
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --primary-tone-015: #181429;
   --primary-tone-020: #241f3d;
   --primary-tone-025: #302952;
@@ -102,7 +102,7 @@ body {
     color: var(--text-tone);
     background: #9285d680;
   }
-}
+} */
 
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500&family=Lobster&family=Roboto+Mono&display=swap");
 
