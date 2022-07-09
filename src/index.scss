@@ -12,7 +12,7 @@ body {
 }
 
 *:focus-visible {
-  outline: 3px solid var(--primary-tone-1);
+  outline-color: var(--primary-tone-1);
 }
 
 ::selection {
