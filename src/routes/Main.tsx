@@ -14,19 +14,18 @@ const Main = () => {
       <img className={"logo"} src={logo} alt="valflrt's logo" />
       <h1>Heya ! I'm valflrt !</h1>
       <p className={"paragraph"}>
-        I am a programming enthusiast, my real name is Valentin Fleurit. I was
-        born at{" "}
+        I like programming. My real name is Valentin Fleurit. I was born at{" "}
         <CopyLink
+          title={`Alive for approximately ${(
+            elapsedDays / 365
+          ).toFixed()} years and ${(elapsedDays % 365).toFixed()} days`}
           className={"link"}
           textToCopy={"1108087200"}
-          title={`Alive for ${(elapsedDays / 365).toFixed()} years and ${(
-            elapsedDays % 365
-          ).toFixed()} days`}
         >
           <code>1108087200</code>
         </CopyLink>{" "}
         (Unix Epoch). I'm French and proud to be (oui oui baguette) and I like
-        typescript. I fight for all file systems to be lowercase.
+        typescript. Beside programming, I like sailing.
       </p>
     </div>
   );
