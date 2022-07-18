@@ -1,6 +1,6 @@
 import React from "react";
 
-import { useWindowEvent } from "./useWindowEvent";
+import useWindowEvent from "./useWindowEvent";
 
 let useClickOutsideEffect = <refElementType extends HTMLElement>(
   callback: (event: MouseEvent) => any,

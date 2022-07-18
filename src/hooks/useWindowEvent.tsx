@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export let useWindowEvent = <E extends keyof WindowEventMap>(
+let useWindowEvent = <E extends keyof WindowEventMap>(
   event: E,
   listener: (this: Window, ev: WindowEventMap[E]) => any,
   options?: boolean | AddEventListenerOptions
@@ -10,3 +10,5 @@ export let useWindowEvent = <E extends keyof WindowEventMap>(
     return () => window.removeEventListener(event, listener);
   });
 };
+
+export default useWindowEvent;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { useWindowEvent } from "./useWindowEvent";
+import useWindowEvent from "./useWindowEvent";
 
 let useIsMobile = () => {
   let condition = () => window.innerWidth < 700;

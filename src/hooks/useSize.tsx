@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { useWindowEvent } from "./useWindowEvent";
+import useWindowEvent from "./useWindowEvent";
 
 export interface Size {
   width: number;
