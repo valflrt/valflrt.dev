@@ -1,6 +1,13 @@
 .main.home {
+  max-width: 500px;
+
   .mobile & {
     padding: 58px 16px;
+  }
+
+  p.paragraph {
+    text-align: center;
+    line-height: 24px;
   }
 
   img.logo {
