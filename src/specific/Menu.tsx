@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { X } from "react-feather";
 
+import useWindowEvent from "../hooks/useWindowEvent";
 import useClickOutsideEffect from "../hooks/useClickOutsideEffect";
 
 import PageSwitchLink from "../common/PageSwitchLink";
@@ -17,6 +18,11 @@ const Menu = () => {
   useClickOutsideEffect<HTMLDivElement | HTMLButtonElement>(
     () => isMenuVisible && setIsMenuVisible(false),
     [menuToggleRef, buttonsRef]
+  );
+
+  useWindowEvent(
+    "keyup",
+    (e) => e.key === "Escape" && isMenuVisible && setIsMenuVisible(false)
   );
 
   let links = [
