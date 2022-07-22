@@ -14,8 +14,7 @@ const Main = () => {
       <img className={"logo"} src={logo} alt="valflrt's logo" />
       <h1>Heya ! I'm valflrt !</h1>
       <p className={"paragraph"}>
-        Hello ! I am Valentin Fleurit (aka valflrt). I like programming and I
-        was born at{" "}
+        Hello ! I am Valentin Fleurit (aka valflrt), just a programming enthusiast. I was born at{" "}
         <CopyLink
           title={`Alive for approximately ${(
             elapsedDays / 365
@@ -25,9 +24,7 @@ const Main = () => {
         >
           <code>1108087200</code>
         </CopyLink>{" "}
-        (Unix Epoch). I'm French and proud to be (oui oui baguette) and I like
-        typescript. Beside programming, I like sailing. Also, I think Window's
-        root is ugly.
+        (Unix Epoch). I'm French and proud to be (oui oui baguette) and I like typescript. Beside programming, I like sailing. Also, I think Window's root is ugly.
       </p>
     </div>
   );
