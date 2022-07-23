@@ -16,15 +16,15 @@ const Main = () => {
       <p className={"paragraph"}>
         Hello ! I am Valentin Fleurit (aka valflrt), just a programming enthusiast. I was born at{" "}
         <CopyLink
-          title={`Alive for approximately ${(
-            elapsedDays / 365
-          ).toFixed()} years and ${(elapsedDays % 365).toFixed()} days`}
-          className={"link"}
-          textToCopy={"1108087200"}
-        >
+      title={`Alive for approximately ${(
+        elapsedDays / 365
+      ).toFixed()} years and ${(elapsedDays % 365).toFixed()} days`}
+      className={"link"}
+      textToCopy={"1108087200"}
+      >
           <code>1108087200</code>
         </CopyLink>{" "}
-        (Unix Epoch). I'm French and proud to be (oui oui baguette) and I like typescript. Beside programming, I like sailing. <br/> Also, I think Window's root is ugly.
+        (Unix Epoch). I'm French and proud to be (oui oui baguette) and I like typescript. Sailing is nice too. Also, I think Window's root is ugly.
       </p>
     </div>
   );
